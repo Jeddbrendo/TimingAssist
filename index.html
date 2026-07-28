@@ -183,6 +183,79 @@
         #clm-container .share-options input[type="checkbox"] { width: 1.2em; height: 1.2em; }
         #clm-container .share-options fieldset { border: 1px solid var(--border); padding: 10px 15px; border-radius: 8px; margin-top: 15px; }
         #clm-container .share-options legend { padding: 0 5px; font-size: .9rem; }
+
+        /* --- 4. Scoped CSS for CBS Timing Assist --- */
+        #cbs-container {
+            --color-bg-body: #f8fafc; --color-bg-container: #ffffff; --color-text-body: #343a40; --color-text-header: #495057;
+            --color-primary: #6f42c1; --color-primary-dark: #59339d; --color-border-light: #e9ecef; --color-border-input: #ced4da;
+            --color-warning-bg: #f8d7da; --color-warning-border: #f5c6cb; --color-warning-text: #dc3545; --color-warning-strong: #721c24;
+            --color-success-bg: #d4edda; --color-success-border: #c3e6cb; --color-success-text: #155724; --color-success-strong: #0d4219;
+            --color-button-bg: #28a745; --color-button-hover: #218838;
+            --block-read-border: #3C7E8A; --block-read-bg: #DEEDF0;
+            --block-bible-border: #2E5F8A; --block-bible-bg: #DCE8F2;
+            --block-discussion-border: #5B3C88; --block-discussion-bg: #EDE7F6;
+            --block-dig-border: #D68F01; --block-dig-bg: #fef9f1;
+            --block-reflect-border: #BF2F14; --block-reflect-bg: #fbeceb;
+            --block-meditate-border: #1d7a46; --block-meditate-bg: #e8f5ee;
+            --pill-bg: #e9ecef; --pill-text: #343a40;
+        }
+        #cbs-container.dark-mode {
+            --color-bg-body: #121212; --color-bg-container: #1e1e1e; --color-text-body: #e0e0e0; --color-text-header: #f5b34c;
+            --color-primary: #b295e0; --color-primary-dark: #c9b6ec; --color-border-light: #333333; --color-border-input: #444444;
+            --color-warning-bg: #4a2d30; --color-warning-border: #6d393d; --color-warning-text: #ff7575; --color-warning-strong: #ff9999;
+            --color-success-bg: #1a3d1a; --color-success-border: #2d5a2d; --color-success-text: #7fdb7f; --color-success-strong: #a3f0a3;
+            --color-button-bg: #4caf50; --color-button-hover: #66bb6a;
+            --block-read-border: #3C7E8A; --block-read-bg: #152C31;
+            --block-bible-border: #4a8bc9; --block-bible-bg: #16283a;
+            --block-discussion-border: #8a6fc9; --block-discussion-bg: #2b2440;
+            --block-dig-border: #D68F01; --block-dig-bg: #352e1a;
+            --block-reflect-border: #d9564a; --block-reflect-bg: #331c1c;
+            --block-meditate-border: #3fb37a; --block-meditate-bg: #163826;
+            --pill-bg: #333333; --pill-text: #e0e0e0;
+        }
+        #cbs-container { font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; background-color: var(--color-bg-body); color: var(--color-text-body); transition: background-color 0.3s, color 0.3s; }
+        #cbs-container .container { max-width: 1100px; margin: 30px auto; }
+        #cbs-container .header-controls { display: flex; justify-content: space-between; align-items: center; }
+        #cbs-container h1 { color: var(--color-primary); font-size: 2.2em; margin-bottom: 5px; display: flex; align-items: center; }
+        #cbs-container h1 .material-symbols-outlined { font-size: 1.1em; margin-left: 10px; vertical-align: middle; }
+        #cbs-container .lead-description { color: var(--color-text-header); font-size: 0.95em; line-height: 1.5; margin-top: 5px; margin-bottom: 20px; }
+        #cbs-container .toggle-button { display: flex; align-items: center; justify-content: center; margin: 0; background: none; border: 1px solid var(--color-border-input); color: var(--color-text-body); font-size: 1.5em; padding: 5px 10px; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
+        #cbs-container .toggle-button:hover { background-color: var(--color-border-light); border-color: var(--color-primary); }
+        #cbs-container .panel { background: var(--color-bg-container); border: 2px solid var(--color-border-light); border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.06); padding: 20px; margin-bottom: 25px; transition: background-color 0.3s, box-shadow 0.3s; }
+        #cbs-container .config-panel { border-color: var(--color-primary); }
+        #cbs-container .row-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px; margin-bottom: 18px; }
+        #cbs-container .row-4 label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.9em; color: var(--color-text-header); }
+        #cbs-container .row-4 input { width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid var(--color-border-input); border-radius: 6px; font-size: 1em; background-color: var(--color-bg-container); color: var(--color-text-body); font-variant-numeric: tabular-nums; }
+        #cbs-container input:focus { border-color: var(--color-primary); box-shadow: 0 0 0 0.2rem var(--color-primary-dark); outline: none; }
+        #cbs-container button.btn { appearance: none; border: 1px solid var(--color-border-input); background: var(--color-bg-container); color: var(--color-text-body); padding: 10px 16px; border-radius: 8px; cursor: pointer; font-size: 0.95em; font-weight: 600; transition: background-color 0.2s; }
+        #cbs-container button.btn.primary { background-color: var(--color-button-bg); border-color: var(--color-button-hover); color: white; }
+        #cbs-container button.btn.primary:hover { background-color: var(--color-button-hover); }
+        #cbs-container button.btn.ghost { background: transparent; }
+        #cbs-container .schedule-block { border-radius: 12px; border: 2px solid; padding: 16px; margin-bottom: 20px; transition: background-color 0.3s, border-color 0.3s; }
+        #cbs-container .schedule-block h3 { margin-top: 0; margin-bottom: 14px; font-weight: 700; }
+        #cbs-container .block-read { border-color: var(--block-read-border); background: var(--block-read-bg); }
+        #cbs-container .block-bible { border-color: var(--block-bible-border); background: var(--block-bible-bg); }
+        #cbs-container .block-discussion { border-color: var(--block-discussion-border); background: var(--block-discussion-bg); }
+        #cbs-container .block-dig { border-color: var(--block-dig-border); background: var(--block-dig-bg); }
+        #cbs-container .block-reflect { border-color: var(--block-reflect-border); background: var(--block-reflect-bg); }
+        #cbs-container .block-meditate { border-color: var(--block-meditate-border); background: var(--block-meditate-bg); }
+        #cbs-container .schedule { display: grid; gap: 10px; }
+        #cbs-container .seg { border: 1px dashed var(--color-border-input); border-radius: 10px; padding: 10px 14px; background: var(--color-bg-container); display: grid; gap: 8px; transition: background-color 0.3s; }
+        #cbs-container .seg-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+        #cbs-container .seg-title { font-weight: 600; }
+        #cbs-container .seg-meta { display: flex; align-items: center; gap: 6px; }
+        #cbs-container .pill { font-size: 0.8em; border-radius: 999px; padding: 4px 10px; background: var(--pill-bg); color: var(--pill-text); white-space: nowrap; font-variant-numeric: tabular-nums; }
+        #cbs-container .seg-controls { display: flex; align-items: center; gap: 8px; }
+        #cbs-container .qty-btn { width: 38px; height: 38px; padding: 0; font-size: 1.2em; font-weight: 700; border-radius: 8px; line-height: 1; }
+        #cbs-container .qtime { width: 90px; text-align: center; padding: 8px; border: 1px solid var(--color-border-input); border-radius: 6px; font-size: 1em; background-color: var(--color-bg-container); color: var(--color-text-body); font-variant-numeric: tabular-nums; }
+        #cbs-container .btn-icon { background: none; border: none; color: var(--color-text-header); cursor: pointer; padding: 4px; line-height: 1; }
+        #cbs-container .btn-icon:hover { color: var(--color-warning-text); }
+        #cbs-container .results-section { border-top: 2px dashed var(--color-border-light); padding-top: 20px; margin-top: 10px; }
+        #cbs-container .warning { color: var(--color-warning-text); font-weight: bold; margin-top: 15px; padding: 10px; border: 1px solid var(--color-warning-border); background-color: var(--color-warning-bg); border-radius: 5px; display: inline-block; }
+        #cbs-container .warning strong { color: var(--color-warning-strong); }
+        #cbs-container .success { color: var(--color-success-text); font-weight: bold; margin-top: 15px; padding: 10px; border: 1px solid var(--color-success-border); background-color: var(--color-success-bg); border-radius: 5px; display: inline-block; }
+        #cbs-container .success strong { color: var(--color-success-strong); }
+        @media (max-width: 480px) { #cbs-container .container { padding: 0; } #cbs-container h1 { font-size: 1.6em; } #cbs-container .panel, #cbs-container .schedule-block { padding: 14px; } #cbs-container .seg-controls { justify-content: flex-start; } }
     </style>
 </head>
 <body>
@@ -196,6 +269,7 @@
         <div class="tab-links-container">
             <button class="tab-link active" onclick="openTab('wttp-container')">WT</button>
             <button class="tab-link" onclick="openTab('clm-container')">CLM</button>
+            <button class="tab-link" onclick="openTab('cbs-container')">CBS</button>
         </div>
     </nav>
 
@@ -381,6 +455,66 @@
                     <button id="cancelShareBtn" class="btn ghost">Cancel</button>
                     <button id="confirmShareBtn" class="btn primary">Generate & Copy</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ... CBS Timing Assist Tab ... -->
+    <div id="cbs-container" class="tab-content" style="display: none;">
+        <div class="container">
+            <div class="header-controls">
+                <h1>CBS Timing Assist <span class="material-symbols-outlined">auto_stories</span></h1>
+                <button class="toggle-button" id="cbsThemeToggle" onclick="cbs_toggleDarkMode()" title="Switch to Dark Mode">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+            </div>
+            <p class="lead-description">Enter the study details below, then calculate the schedule. Use the +/- buttons on any question to adjust its allotted time (each click is 30 seconds) — the schedule updates automatically. You can also type a time directly into any field.</p>
+
+            <div class="panel config-panel">
+                <div class="row-4">
+                    <div><label for="cbsStudyStart">Study Start Time:</label><input id="cbsStudyStart" type="time" value="19:30"></div>
+                    <div><label for="cbsStudyStop">Study Stop Time (Target):</label><input id="cbsStudyStop" type="time" value="20:00"></div>
+                    <div><label for="cbsCutdown">CBS Cutdown +/- (min):</label><input id="cbsCutdown" type="number" step="1" value="0"></div>
+                    <div><label for="cbsReadingLength">Reading Length (MM:SS):</label><input id="cbsReadingLength" type="text" maxlength="5" value="03:00" placeholder="e.g., 03:00"></div>
+                </div>
+                <button class="btn primary" id="cbsCalculateBtn" type="button">Calculate Schedule</button>
+            </div>
+
+            <div class="schedule-block block-read">
+                <h3>Study Reading (Paragraphs)</h3>
+                <div id="cbs-schedule-read" class="schedule"></div>
+            </div>
+
+            <div class="schedule-block block-bible">
+                <h3>Read the Bible Account</h3>
+                <div id="cbs-schedule-bible" class="schedule"></div>
+            </div>
+
+            <div class="schedule-block block-discussion">
+                <h3>For Discussion</h3>
+                <div id="cbs-schedule-discussion" class="schedule"></div>
+            </div>
+
+            <div class="schedule-block block-dig">
+                <h3>Dig Deeper</h3>
+                <div id="cbs-schedule-dig" class="schedule"></div>
+            </div>
+
+            <div class="schedule-block block-reflect">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+                    <h3 style="margin:0;">Reflect on the Lessons</h3>
+                    <button class="btn primary" id="cbsAddReflectBtn" type="button">+ Add Question</button>
+                </div>
+                <div id="cbs-schedule-reflect" class="schedule"></div>
+            </div>
+
+            <div class="schedule-block block-meditate">
+                <h3>Meditate on the Bigger Picture</h3>
+                <div id="cbs-schedule-meditate" class="schedule"></div>
+            </div>
+
+            <div class="results-section">
+                <p class="warning" id="cbsTotalDuration" style="display:none;"></p>
             </div>
         </div>
     </div>
@@ -928,6 +1062,262 @@
             if (!hasExpectedSegments) { state.segments = defaultTemplate(); save(); }
             if (!state.cfg.start) state.cfg.start = '19:30';
             render();
+        })();
+
+        // --- 4. Scoped JavaScript for CBS Timing Assist ---
+        (() => {
+            const CBS_STEP_SECONDS = 30; // +/- button increment
+            const container = document.getElementById('cbs-container');
+            const $ = (id) => document.getElementById(id);
+
+            function updateToggleIcon(isDarkMode) {
+                const btn = $('cbsThemeToggle');
+                if (!btn) return;
+                btn.innerHTML = isDarkMode ? '<span class="material-symbols-outlined">light_mode</span>' : '<span class="material-symbols-outlined">dark_mode</span>';
+                btn.title = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+            }
+
+            window.cbs_toggleDarkMode = function() {
+                container.classList.toggle('dark-mode');
+                const isDarkMode = container.classList.contains('dark-mode');
+                localStorage.setItem('cbs_theme', isDarkMode ? 'dark' : 'light');
+                updateToggleIcon(isDarkMode);
+            }
+
+            // --- Time helpers (seconds-based) ---
+            function mmssToSeconds(timeStr) {
+                const cleanStr = (timeStr || '').replace(/[^0-9:]/g, '');
+                const parts = cleanStr.split(':');
+                let minutes = 0, seconds = 0;
+                if (parts.length === 2) {
+                    minutes = parseInt(parts[0]) || 0;
+                    seconds = parseInt(parts[1]) || 0;
+                } else if (cleanStr.length >= 3) {
+                    minutes = parseInt(cleanStr.substring(0, cleanStr.length - 2)) || 0;
+                    seconds = parseInt(cleanStr.substring(cleanStr.length - 2)) || 0;
+                } else if (cleanStr.length > 0) {
+                    seconds = parseInt(cleanStr) || 0;
+                }
+                if (isNaN(minutes) || isNaN(seconds) || seconds >= 60 || minutes < 0 || seconds < 0) return NaN;
+                return (minutes * 60) + seconds;
+            }
+            function secondsToMMSS(totalSeconds) {
+                const s = Math.max(0, Math.round(totalSeconds || 0));
+                const m = Math.floor(s / 60);
+                const r = s % 60;
+                return `${String(m).padStart(2, '0')}:${String(r).padStart(2, '0')}`;
+            }
+            window.cbs_formatTime = function(input) {
+                let value = input.value.replace(/\D/g, '');
+                if (value.length > 4) value = value.substring(0, 4);
+                input.value = value.length >= 3 ? value.slice(0, -2) + ':' + value.slice(-2) : value;
+            }
+            function timeToMinutes(timeStr) {
+                if (!timeStr) return 0;
+                const [h, m] = timeStr.split(':').map(Number);
+                return (h * 60) + (m || 0);
+            }
+            function minutesToClock12(totalMinutes) {
+                const secondsInDay = 24 * 60;
+                let mins = ((totalMinutes % secondsInDay) + secondsInDay) % secondsInDay;
+                let hours = Math.floor(mins / 60);
+                const minutes = Math.round(mins % 60);
+                const ampm = hours >= 12 ? 'PM' : 'AM';
+                hours = hours % 12; if (hours === 0) hours = 12;
+                return `${hours}:${String(minutes).padStart(2, '0')} ${ampm}`;
+            }
+
+            // --- State ---
+            function defaultState() {
+                return {
+                    start: '20:36',
+                    stop: '21:06',
+                    cutdown: 0,
+                    read: [180],           // Study Reading (Paragraphs) - seconds - mirrors Reading Length field
+                    bible: [120],           // Read the Bible Account - independent, adjustable via +/-
+                    discussion: [120],     // For Discussion - 1 question
+                    dig: [120, 120, 120, 120], // Dig Deeper - 4 questions
+                    reflect: [120, 120, 120],  // Reflect on the Lessons - default 3, expandable
+                    meditate: [120, 120, 120]  // Meditate on the Bigger Picture - 3 questions
+                };
+            }
+            let state = defaultState();
+
+            function save() { localStorage.setItem('cbs_state', JSON.stringify(state)); }
+            function load() {
+                try {
+                    const saved = JSON.parse(localStorage.getItem('cbs_state'));
+                    if (saved) state = Object.assign(defaultState(), saved);
+                } catch (e) { /* keep defaults */ }
+            }
+
+            const BLOCK_TITLES = {
+                read: (i) => 'Study Reading (Paragraphs)',
+                bible: (i) => 'Read the Bible Account',
+                discussion: (i) => 'For Discussion',
+                dig: (i) => `Dig Deeper — Question ${i + 1}`,
+                reflect: (i) => `Reflect — Question ${i + 1}`,
+                meditate: (i) => `Meditate — Question ${i + 1}`
+            };
+            const BLOCK_CONTAINER = {
+                read: 'cbs-schedule-read',
+                bible: 'cbs-schedule-bible',
+                discussion: 'cbs-schedule-discussion',
+                dig: 'cbs-schedule-dig',
+                reflect: 'cbs-schedule-reflect',
+                meditate: 'cbs-schedule-meditate'
+            };
+            const BLOCK_ORDER = ['read', 'bible', 'discussion', 'dig', 'reflect', 'meditate'];
+
+            function rowHTML(blockKey, idx, seconds, startMin, endMin, deletable) {
+                const title = BLOCK_TITLES[blockKey](idx);
+                const mmss = secondsToMMSS(seconds);
+                const deleteBtn = deletable
+                    ? `<button class="btn-icon" data-action="delete" data-block="${blockKey}" data-index="${idx}" title="Remove question"><span class="material-symbols-outlined">delete</span></button>`
+                    : '';
+                return `<div class="seg">
+                    <div class="seg-head">
+                        <div class="seg-title">${title}</div>
+                        <div class="seg-meta">
+                            <span class="pill">Start: ${minutesToClock12(startMin)}</span>
+                            <span class="pill">End: ${minutesToClock12(endMin)}</span>
+                            ${deleteBtn}
+                        </div>
+                    </div>
+                    <div class="seg-controls">
+                        <button class="btn ghost qty-btn" data-action="minus" data-block="${blockKey}" data-index="${idx}" type="button">−</button>
+                        <input type="text" class="qtime" data-action="settime" data-block="${blockKey}" data-index="${idx}" value="${mmss}" maxlength="5" inputmode="numeric" oninput="cbs_formatTime(this)">
+                        <button class="btn ghost qty-btn" data-action="plus" data-block="${blockKey}" data-index="${idx}" type="button">+</button>
+                    </div>
+                </div>`;
+            }
+
+            function render() {
+                $('cbsStudyStart').value = state.start;
+                $('cbsStudyStop').value = state.stop;
+                $('cbsCutdown').value = state.cutdown;
+                $('cbsReadingLength').value = secondsToMMSS(state.read[0]);
+
+                let current = timeToMinutes(state.start);
+                BLOCK_ORDER.forEach(blockKey => {
+                    const el = $(BLOCK_CONTAINER[blockKey]);
+                    let html = '';
+                    state[blockKey].forEach((seconds, idx) => {
+                        const startMin = current;
+                        current += (seconds / 60);
+                        const endMin = current;
+                        const deletable = (blockKey === 'reflect' && state.reflect.length > 1);
+                        html += rowHTML(blockKey, idx, seconds, startMin, endMin, deletable);
+                    });
+                    el.innerHTML = html;
+                });
+
+                const actualEndMin = current;
+                const startMin = timeToMinutes(state.start);
+                const targetStopMin = timeToMinutes(state.stop) + (parseFloat(state.cutdown) || 0);
+
+                let totalUsed = actualEndMin - startMin;
+                if (totalUsed < 0) totalUsed += 24 * 60;
+                let totalAllocated = targetStopMin - startMin;
+                if (totalAllocated < 0) totalAllocated += 24 * 60;
+
+                let a = actualEndMin, b = targetStopMin;
+                if (b < startMin) b += 24 * 60;
+                if (a < startMin) a += 24 * 60;
+
+                const totalEl = $('cbsTotalDuration');
+                let msg = `<strong>Study Ends at: ${minutesToClock12(actualEndMin)}</strong> (Target, incl. cutdown: ${minutesToClock12(targetStopMin)})<br>Time used: ${totalUsed.toFixed(1)} min | Time allocated: ${totalAllocated.toFixed(1)} min`;
+                let cls = 'warning';
+                if (a > b) {
+                    msg += `<br><br><strong>WARNING:</strong> You are <strong>${(a - b).toFixed(1)} minutes over</strong> the target stop time!`;
+                    cls = 'warning';
+                } else {
+                    msg += `<br><br><strong>✓ On Schedule:</strong> ${(b - a).toFixed(1)} minutes remaining`;
+                    cls = 'success';
+                }
+                totalEl.innerHTML = msg;
+                totalEl.className = cls;
+                totalEl.style.display = 'inline-block';
+
+                save();
+            }
+
+            function adjustTime(blockKey, idx, deltaSeconds) {
+                const arr = state[blockKey];
+                if (!arr || !arr[idx] === undefined) return;
+                arr[idx] = Math.max(0, (arr[idx] || 0) + deltaSeconds);
+                if (blockKey === 'read') arr[idx] = arr[idx]; // reading length has no floor beyond 0
+                render();
+            }
+
+            function setTimeDirect(blockKey, idx, mmss) {
+                const secs = mmssToSeconds(mmss);
+                if (!isNaN(secs)) {
+                    state[blockKey][idx] = secs;
+                    render();
+                }
+            }
+
+            function addReflectQuestion() {
+                state.reflect.push(120);
+                render();
+            }
+            function removeReflectQuestion(idx) {
+                if (state.reflect.length <= 1) return;
+                state.reflect.splice(idx, 1);
+                render();
+            }
+
+            // Event delegation for all +/-/delete/time-entry controls
+            container.addEventListener('click', (e) => {
+                const target = e.target.closest('[data-action]');
+                if (!target) return;
+                const action = target.dataset.action;
+                const blockKey = target.dataset.block;
+                const idx = parseInt(target.dataset.index, 10);
+                if (action === 'plus') adjustTime(blockKey, idx, CBS_STEP_SECONDS);
+                else if (action === 'minus') adjustTime(blockKey, idx, -CBS_STEP_SECONDS);
+                else if (action === 'delete' && blockKey === 'reflect') removeReflectQuestion(idx);
+            });
+            container.addEventListener('change', (e) => {
+                const target = e.target.closest('[data-action="settime"]');
+                if (!target) return;
+                setTimeDirect(target.dataset.block, parseInt(target.dataset.index, 10), target.value);
+            });
+
+            $('cbsAddReflectBtn').addEventListener('click', addReflectQuestion);
+            $('cbsCalculateBtn').addEventListener('click', () => {
+                state.start = $('cbsStudyStart').value || state.start;
+                state.stop = $('cbsStudyStop').value || state.stop;
+                state.cutdown = parseFloat($('cbsCutdown').value) || 0;
+                const readingSecs = mmssToSeconds($('cbsReadingLength').value);
+                if (!isNaN(readingSecs)) state.read[0] = readingSecs;
+                render();
+            });
+            ['cbsStudyStart', 'cbsStudyStop', 'cbsCutdown'].forEach(id => {
+                $(id).addEventListener('change', () => {
+                    state.start = $('cbsStudyStart').value || state.start;
+                    state.stop = $('cbsStudyStop').value || state.stop;
+                    state.cutdown = parseFloat($('cbsCutdown').value) || 0;
+                    render();
+                });
+            });
+            $('cbsReadingLength').addEventListener('change', () => {
+                const secs = mmssToSeconds($('cbsReadingLength').value);
+                if (!isNaN(secs)) { state.read[0] = secs; render(); }
+            });
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const savedTheme = localStorage.getItem('cbs_theme');
+                let isDarkMode = false;
+                if (savedTheme === 'dark' || (savedTheme !== 'light' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    isDarkMode = true;
+                }
+                if (isDarkMode) container.classList.add('dark-mode');
+                updateToggleIcon(isDarkMode);
+                load();
+                render();
+            });
         })();
 
     </script>
