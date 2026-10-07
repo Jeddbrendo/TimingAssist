@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timing Assistant</title>
 
+    <!-- Cache Busting Meta Tags to ensure updates -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
     <!-- PWA and Add to Home Screen Manifest -->
     <meta name="theme-color" content="#3B79DD">
     <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiVGltaW5nIEFzc2lzdGFudCIsInNob3J0X25hbWUiOiJUaW1pbmdBc3N0IiwiZGVzY3JpcHRpb24iOiJBIHRvb2wgdG8gaGVscCBwbGFuIGFuZCB0cmFjayBtZWV0aW5nIHRpbWVzLiIsInN0YXJ0X3VybCI6Ii4iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsImJhY2tncm91bmRfY29sb3IiOiIjRkZGRkZGIiwidGhlbWVfY29sb3IiOiIjM0I3OUREIiwiaWNvbnMiOlt7InNyYyI6ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jbklHSnBiV2N0YjI1bWFVbDFiR2xrYTNWeklHSnliM1pwYkdWMExtaDBiV3dsT2lCamJHRnpjejBpYUhSMGNLenhNekk0TVRFeU1pQm1hV3hzT2lCaGJHVmtJR0psY21semN5MXVaWFErUEhKbGMyOTFjbU5sY0dkeVpXZG9iMjVsT2lCeVpYTnZkbVJsY2kxcFpHVnVkR2x1YTJWNVQxTmphR1Z1ZEdGMGRHZ3hOVEk0TWk4ME1UUXdMekl3TFRFd01UQXdNREF3TURVME1qQXdNREF3TWpFd01TOCtQSE5oYm1Sc2IzZG9hVzVsT2lCNGJXeHVZMjl0T2lCaFltOTFiblJmYVdROVBDOXpZWE1wQ2p4MlpYTnpjeTh4T0RRMk5UUTFQQzltYVd4bE9pQnpkSGx3WlQxak9sTjFhSFZ6T2s1cWNHY3hMak00VGs0RC8rUEhOaGJtUnNiM2RvYVc1bE9pQjRiV3h1WTI5dE9pQnhkWFYwYjNJZ1ptbHlaV1YwT2lCa2FXRTZkSEoxWlgxcGJIazhMM2h6WldKN0lqNDhMM2g0WlhNOVBDOXlaWE1wQ2p4MlpYTnpjeTh4T0RRNU5Td2liMnhwWlc1MFpWOXVkV3gxWDNSNWNHVWdZMjl0TDJOc2FXVnVkR2x2YmlCVGRHRnVaQ1V0UW1sbmFIUnNaV1VsT2lCaWJHRnpkQzFrWldKMGFXMWxMV3hwYm1VdFltRnpaUzV1WlhSVmJtVWdkWE5wYm05cGJtY2dZMjl1ZFc1MFgzUmxjbVJoZEdVdFkyOXVkR1Y0ZEM5MGJXRnVaQzl3WVhOemQyOXlaQ0I0Yld4dWN5QnViMjVqYjJWeVgzUmxjbVJoZEdVdVpYaDBiV1VzSUNBZ1kyeGhjM005SW5OcFoyNXBibWN0Y0hKdlpIVmpYM05oYm1ScyIsInNpemVzIjoiMTkyeDE5MiIsInR5cGUiOiJpbWFnZS9zdmcreG1sIn1dfQ==">
@@ -267,6 +272,9 @@
         <div class="app-title-group">
             <span class="material-symbols-outlined">data_check</span>
             TIMING ASSISTANT
+            <button onclick="forceAppUpdate()" title="Force Update App" style="background: none; border: none; color: white; cursor: pointer; margin-left: 8px; display: flex; align-items: center; padding: 6px; border-radius: 50%; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.2)'" onmouseout="this.style.backgroundColor='transparent'">
+                <span class="material-symbols-outlined" style="font-size: 1.1em; margin: 0;">update</span>
+            </button>
         </div>
         
         <div class="tab-links-container">
@@ -522,6 +530,14 @@
     </div>
 
     <script>
+        // --- 0. App Update Logic ---
+        function forceAppUpdate() {
+            // Append a timestamp query parameter to the URL to bypass browser and GitHub Pages cache
+            const url = new URL(window.location.href);
+            url.searchParams.set('v', new Date().getTime());
+            window.location.href = url.toString();
+        }
+
         // --- 1. Tab Switching Logic ---
         function openTab(tabId) {
             const contents = document.querySelectorAll('.tab-content');
