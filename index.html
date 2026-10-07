@@ -1192,7 +1192,51 @@
             
             function deleteSegment(id) { state.segments = state.segments.filter(seg => seg.id !== id); render(); save(); }
             
-            function generateReportText(options) { let report = `CLM Meeting Variance Report\n--------------------------------------\n`; if (options.includeTimes) { report += `Meeting Target Start: ${state.cfg.start ? formatTo12h_short(state.cfg.start + ':00') : 'N/A'}\n`; report += `Meeting Target End: ${state.cfg.end ? formatTo12h_short(state.cfg.end + ':00') : 'N/A'}\n`; } const blocks = { 'A': { title: 'TREASURES FROM GOD\'S WORD', segments: [], include: options.includeTreasures }, 'B': { title: 'APPLY YOURSELF TO THE MINISTRY', segments: [], include: options.includeMinistry }, 'C': { title: 'LIVING AS CHRISTIANS', segments: [], include: options.includeLiving } }; state.segments.forEach(seg => { if (blocks[seg.block]) blocks[seg.block].segments.push(seg); }); let totalTargetSeconds = 0, totalActualSeconds = 0; for (const blockKey in blocks) { const block = blocks[blockKey]; if (block.include && block.segments.length > 0) { report += `\n== ${block.title} ==\n`; block.segments.forEach((seg) => { if (seg.isTimed === false) return; const targetSec = toSec(seg.target), actualSec = seg.duration || hmsdiff(seg.start, seg.end); const deltaSec = actualSec - targetSec; if (actualSec > 0) { totalTargetSeconds += targetSec; totalActualSeconds += actualSec; } const varianceText = deltaSec >= 0 ? `(+${fromSec(deltaSec)})` : `(-${fromSec(Math.abs(deltaSec))})`; let partDetails = ''; if (options.includePartTimes && seg.start && seg.end) { partDetails = ` (${formatTo12h_short(seg.start)} - ${formatTo12h_short(seg.end)})`; } report += `${seg.title}:${partDetails} ${varianceText}\n`; }); } } if (options.includeOverallVariance) { const overallVariance = totalActualSeconds - totalTargetSeconds; const overallVarianceText = overallVariance >= 0 ? `+${fromSecHMS(overallVariance)}` : `-${fromSecHMS(Math.abs(overallVariance))}`; report += `\n--------------------------------------\nOVERALL MEETING VARIANCE:\n${overallVarianceText}\n--------------------------------------\n`; } return report; }
+            function generateReportText(options) { 
+                let report = `CLM Meeting Variance Report\n--------------------------------------\n`; 
+                if (options.includeTimes) { 
+                    report += `Meeting Target Start: ${state.cfg.start ? formatTo12h_short(state.cfg.start + ':00') : 'N/A'}\n`; 
+                    report += `Meeting Target End: ${state.cfg.end ? formatTo12h_short(state.cfg.end + ':00') : 'N/A'}\n`; 
+                } 
+                const blocks = { 
+                    'A': { title: 'TREASURES FROM GOD\'S WORD', segments: [], include: options.includeTreasures }, 
+                    'B': { title: 'APPLY YOURSELF TO THE MINISTRY', segments: [], include: options.includeMinistry }, 
+                    'C': { title: 'LIVING AS CHRISTIANS', segments: [], include: options.includeLiving } 
+                }; 
+                state.segments.forEach(seg => { 
+                    if (blocks[seg.block]) blocks[seg.block].segments.push(seg); 
+                }); 
+                let totalTargetSeconds = 0, totalActualSeconds = 0; 
+                for (const blockKey in blocks) { 
+                    const block = blocks[blockKey]; 
+                    if (block.include && block.segments.length > 0) { 
+                        report += `\n== ${block.title} ==\n`; 
+                        block.segments.forEach((seg) => { 
+                            if (seg.isTimed === false) return; 
+                            const targetSec = toSec(seg.target); 
+                            const actualSec = seg.duration || hmsdiff(seg.start, seg.end); 
+                            const deltaSec = actualSec - targetSec; 
+                            if (actualSec > 0) { 
+                                totalTargetSeconds += targetSec; 
+                                totalActualSeconds += actualSec; 
+                            } 
+                            const varianceText = deltaSec >= 0 ? `(+${fromSec(deltaSec)})` : `(-${fromSec(Math.abs(deltaSec))})`; 
+                            let partDetails = ''; 
+                            if (options.includePartTimes && seg.start && seg.end) { 
+                                partDetails = ` (${formatTo12h_short(seg.start)} - ${formatTo12h_short(seg.end)})`; 
+                            } 
+                            report += `${seg.title}: ${fromSec(actualSec)}${partDetails} ${varianceText}\n`; 
+                        }); 
+                    } 
+                } 
+                if (options.includeOverallVariance) { 
+                    const overallVariance = totalActualSeconds - totalTargetSeconds; 
+                    const overallVarianceText = overallVariance >= 0 ? `+${fromSecHMS(overallVariance)}` : `-${fromSecHMS(Math.abs(overallVariance))}`; 
+                    report += `\n--------------------------------------\nOVERALL MEETING VARIANCE:\n${overallVarianceText}\n--------------------------------------\n`; 
+                } 
+                return report; 
+            }
+            
             function copyReport(reportText, buttonElement) { const tempInput = document.createElement('textarea'); tempInput.value = reportText; tempInput.style.position = 'absolute'; tempInput.style.left = '-9999px'; document.body.appendChild(tempInput); tempInput.select(); try { if (document.execCommand('copy')) { buttonElement.innerHTML = '<span class="material-symbols-outlined">done</span> Copied!'; buttonElement.classList.replace('primary', 'ok'); setTimeout(() => { buttonElement.innerHTML = '<span class="material-symbols-outlined">share</span> Share'; buttonElement.classList.replace('ok', 'primary'); }, 2000); } else { throw new Error('Copy failed'); } } catch (err) { buttonElement.innerHTML = '<span class="material-symbols-outlined">error</span> Failed'; buttonElement.classList.replace('primary', 'warn'); setTimeout(() => { buttonElement.innerHTML = '<span class="material-symbols-outlined">share</span> Share'; buttonElement.classList.replace('warn', 'primary'); }, 3000); } finally { document.body.removeChild(tempInput); } }
             
             function clm_updateToggleIcon(isDarkMode) { if (!els.themeIcon) return; if (isDarkMode) { els.themeIcon.textContent = 'light_mode'; els.themeBtn.title = 'Switch to Light Mode'; } else { els.themeIcon.textContent = 'dark_mode'; els.themeBtn.title = 'Switch to Dark Mode'; } }
@@ -1501,4 +1545,3 @@
     </script>
 </body>
 </html>
-
