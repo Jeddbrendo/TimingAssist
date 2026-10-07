@@ -150,6 +150,79 @@
         #clm-container input[data-actual-duration][readonly], #clm-container input#meetingEnd[readonly] { background: var(--border); cursor: default; opacity: 0.8; }
         #clm-container .btn { appearance: none; border: 1px solid var(--border); background: var(--panel); color: var(--text); padding: 6px 12px; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; font-size: 0.95em; }
         #clm-container .btn.primary { background: var(--accent); border-color: var(--accent-600); color: #fff; }
+ule-table input[type="text"] { width: 7.5ch; }
+        #wttp-container input[type="time"] { width: 12ch; font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+        #wttp-container #defaultAnswerTime, #wttp-container #reviewAnswerTime, #wttp-container .schedule-table input[type="number"] { width: 6ch; }
+        #wttp-container .input-group input:focus { border-color: var(--color-primary); box-shadow: 0 0 0 0.2rem var(--color-primary-dark); outline: none; }
+        #wttp-container .mode-toggle-container { margin-bottom: 25px; padding: 10px; border-radius: 8px; background-color: var(--color-border-light); display: inline-block; }
+        #wttp-container.dark-mode .mode-toggle-container { background-color: #333333; }
+        #wttp-container #modeSwitch { margin-right: 10px; }
+        #wttp-container button:not(.toggle-button) { background-color: var(--color-button-bg); color: white; padding: 12px 25px; border: none; border-radius: 6px; cursor: pointer; margin-top: 15px; font-size: 1em; font-weight: bold; transition: background-color 0.3s, transform 0.1s; }
+        #wttp-container button:not(.toggle-button):hover { background-color: var(--color-button-hover); }
+        #wttp-container button:not(.toggle-button):active { transform: scale(0.99); }
+        #wttp-container .print-button { background-color: #007bff; margin-left: 10px; }
+        #wttp-container .print-button:hover { background-color: #0056b3; }
+        #wttp-container hr { border: 0; height: 1px; background-color: var(--color-border-light); margin: 40px 0; }
+        #wttp-container table { width: 100%; border-collapse: collapse; margin-top: 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); border-radius: 8px; overflow: hidden; }
+        #wttp-container.dark-mode table { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); }
+        #wttp-container th, #wttp-container td { border: 1px solid var(--color-border-light); padding: 12px; text-align: left; font-size: 0.95em; }
+        #wttp-container th { background-color: var(--color-table-header-bg); color: white; text-align: center; font-weight: 600; border-color: var(--color-table-header-bg); }
+        #wttp-container tr:nth-child(even) { background-color: var(--color-table-row-even); }
+        #wttp-container .time-calc-table td input { width: 90%; text-align: center; padding: 8px 5px; box-sizing: border-box; }
+        #wttp-container #readingCalcTable td:last-child input { background-color: var(--color-table-result-bg); font-weight: bold; color: var(--color-table-result-text); border: 1px solid var(--color-table-result-text); }
+        
+        #wttp-container .schedule-table th:nth-child(2), #wttp-container .schedule-table th:nth-child(3) { text-align: center; }
+        #wttp-container .schedule-table input { padding: 6px 3px; text-align: center; }
+        #wttp-container .schedule-table td:nth-child(4), #wttp-container .schedule-table td:nth-child(5), #wttp-container .schedule-table td:nth-child(6) { text-align: center; font-weight: 500; }
+        #wttp-container .schedule-table td:nth-child(4) strong { color: var(--color-schedule-start-time); }
+        #wttp-container .review-row td { background-color: var(--color-review-bg-light) !important; font-weight: bold; }
+        #wttp-container .review-row td:last-child { background-color: var(--color-review-bg-dark) !important; }
+        #wttp-container .review-row input[readonly] { background-color: var(--color-border-light) !important; }
+        #wttp-container .results-section { border-top: 2px dashed var(--color-border-light); padding-top: 25px; margin-top: 30px; }
+        #wttp-container #scheduleTable p { font-style: italic; color: var(--color-text-header); }
+        #wttp-container #totalDuration { display: none; }
+        #wttp-container .warning { color: var(--color-warning-text); font-weight: bold; margin-top: 15px; padding: 10px; border: 1px solid var(--color-warning-border); background-color: var(--color-warning-bg); border-radius: 5px; display: inline-block; }
+        #wttp-container .warning strong { color: var(--color-warning-strong); }
+        #wttp-container .success { color: #155724; font-weight: bold; margin-top: 15px; padding: 10px; border: 1px solid #c3e6cb; background-color: #d4edda; border-radius: 5px; display: inline-block; }
+        #wttp-container .success strong { color: #0d4219; }
+        #wttp-container.dark-mode .success { color: #7fdb7f; border-color: #2d5a2d; background-color: #1a3d1a; }
+        #wttp-container.dark-mode .success strong { color: #a3f0a3; }
+        #wttp-container #manualModeInputs, #wttp-container #scheduleTable { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        #wttp-container #readingCalcTable, #wttp-container .schedule-table { min-width: 520px; }
+        @media (max-width: 480px) { #wttp-container .container { padding: 16px; margin: 12px auto; } #wttp-container .step-one .common-inputs, #wttp-container .step-two .common-inputs { gap: 12px; } #wttp-container h1 { font-size: 1.6em; } #wttp-container h2 { font-size: 1.25em; } #wttp-container button:not(.toggle-button) { padding: 10px 16px; } }
+        #wttp-container input[type="number"] { -moz-appearance: textfield; }
+        #wttp-container input[type="number"]::-webkit-outer-spin-button, #wttp-container input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+        @media (prefers-reduced-motion: reduce) { #wttp-container * { transition: none !important; animation: none !important; } }
+        
+        /* --- 3. Scoped CSS for CLM Time Tracker --- */
+        #clm-container { --bg: #f8fafc; --panel: #ffffff; --text: #0f172a; --muted: #4b5563; --accent: #2563eb; --accent-600: #1d4ed8; --border: #e5e7eb; --ok: #16a34a; --ok-600: #15803d; --bad: #dc2626; --bad-600: #b91c1c; --warning: #f59e0b; --warning-600: #d97706; --shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 6px 16px rgba(0, 0, 0, .12); --config-border: #5B3C88; --block-a-border: #3C7E8A; --block-b-border: #D68F01; --block-c-border: #BF2F14; --block-a-bg: #DEEDF0; --block-b-bg: #fef9f1; --block-c-bg: #fbeceb; --heading-color: #1d4ed8; }
+        #clm-container[data-theme="dark"] { --bg: #121212; --panel: #1e1e1e; --text: #e6e9ef; --muted: #a7b0c0; --accent: #4f8cff; --accent-600: #2f6fe6; --border: #2a2f3a; --ok: #2ec27e; --ok-600: #15803d; --bad: #ff5d5d; --bad-600: #b91c1c; --warning: #facc15; --warning-600: #eab308; --shadow: 0 1px 2px rgba(0, 0, 0, .25), 0 6px 16px rgba(0, 0, 0, .25); --config-border: #5B3C88; --block-a-border: #3C7E8A; --block-b-border: #D68F01; --block-c-border: #BF2F14; --block-a-bg: #152C31; --block-b-bg: #352e1a; --block-c-bg: #331c1c; --heading-color: #8ab4f8; }
+        #clm-container { font: 16px/2.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: var(--text); background: var(--bg); padding: 15px 20px; }
+        
+        #clm-container .container { max-width: 1100px; margin: 15px auto; }
+        #clm-container .header-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 0; }
+        #clm-container .toggle-button { display: flex; align-items: center; justify-content: center; margin: 0; background: none; border: 1px solid var(--border); color: var(--text); font-size: 1.5em; padding: 5px 10px; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
+        #clm-container .toggle-button:hover { background-color: var(--border); border-color: var(--accent); }
+        #clm-container .lead-description { color: var(--muted); font-size: .95rem; line-height: 1.4; margin-top: 5px; margin-bottom: 12px; }
+        #clm-container h1 { font-size: 1.8rem; margin: 0; color: var(--heading-color); }
+        #clm-container .panel, #clm-container .schedule-block { background: var(--panel); border: 2px solid var(--border); border-radius: 10px; box-shadow: var(--shadow); padding: 10px 14px; margin-bottom: 14px; }
+        #clm-container .config-panel { border-color: var(--config-border); }
+        #clm-container .block-a { border-color: var(--block-a-border); background: var(--block-a-bg); }
+        #clm-container .block-b { border-color: var(--block-b-border); background: var(--block-b-bg); }
+        #clm-container .block-c { border-color: var(--block-c-border); background: var(--block-c-bg); }
+        #clm-container .schedule-block h3 { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif; font-weight: 600; margin-top: 0; margin-bottom: 8px; font-size: 1.1em; }
+        #clm-container .grid { display: grid; gap: 8px; }
+        #clm-container .row { display: grid; gap: 8px; grid-template-columns: 1fr; }
+        @media (min-width: 560px) { #clm-container .row-2 { grid-template-columns: 1fr 1fr; } }
+        @media (min-width: 740px) { #clm-container .row-3 { grid-template-columns: 1fr; } }
+        #clm-container fieldset { border: none; margin: 0; padding: 0; }
+        #clm-container legend { font-weight: 600; margin-bottom: 4px; }
+        #clm-container label { display: block; font-size: .8rem; color: var(--muted); margin-bottom: 2px; }
+        #clm-container input, #clm-container button { font: inherit; }
+        #clm-container input[type="text"], #clm-container input[type="time"] { width: 100%; box-sizing: border-box; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--panel); color: var(--text); }
+        #clm-container input[data-actual-duration][readonly], #clm-container input#meetingEnd[readonly] { background: var(--border); cursor: default; opacity: 0.8; }
+        #clm-container .btn { appearance: none; border: 1px solid var(--border); background: var(--panel); color: var(--text); padding: 6px 12px; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; font-size: 0.95em; }
+        #clm-container .btn.primary { background: var(--accent); border-color: var(--accent-600); color: #fff; }
         #clm-container .btn.ghost { background: transparent; }
         #clm-container .btn.ok { background: var(--ok); color: white; border-color: var(--ok-600); }
         #clm-container .btn.warn { background: var(--bad); color: white; border-color: var(--bad-600); }
