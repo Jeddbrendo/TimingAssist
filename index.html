@@ -147,116 +147,44 @@
         #clm-container .btn.ghost { background: transparent; }
         #clm-container .btn.ok { background: var(--ok); color: white; border-color: var(--ok-600); }
         #clm-container .btn.warn { background: var(--bad); color: white; border-color: var(--bad-600); }
-        #clm-container .btn-icon { backgrounth: 6ch; }
-        #wttp-container .input-group input:focus { border-color: var(--color-primary); box-shadow: 0 0 0 0.2rem var(--color-primary-dark); outline: none; }
-        #wttp-container .mode-toggle-container { margin-bottom: 25px; padding: 10px; border-radius: 8px; background-color: var(--color-border-light); display: inline-block; }
-        #wttp-container.dark-mode .mode-toggle-container { background-color: #333333; }
-        #wttp-container #modeSwitch { margin-right: 10px; }
-        #wttp-container button:not(.toggle-button) { background-color: var(--color-button-bg); color: white; padding: 12px 25px; border: none; border-radius: 6px; cursor: pointer; margin-top: 15px; font-size: 1em; font-weight: bold; transition: background-color 0.3s, transform 0.1s; }
-        #wttp-container button:not(.toggle-button):hover { background-color: var(--color-button-hover); }
-        #wttp-container button:not(.toggle-button):active { transform: scale(0.99); }
-        #wttp-container .print-button { background-color: #007bff; margin-left: 10px; }
-        #wttp-container .print-button:hover { background-color: #0056b3; }
-        #wttp-container hr { border: 0; height: 1px; background-color: var(--color-border-light); margin: 40px 0; }
-        #wttp-container table { width: 100%; border-collapse: collapse; margin-top: 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); border-radius: 8px; overflow: hidden; }
-        #wttp-container.dark-mode table { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); }
-        #wttp-container th, #wttp-container td { border: 1px solid var(--color-border-light); padding: 12px; text-align: left; font-size: 0.95em; }
-        #wttp-container th { background-color: var(--color-table-header-bg); color: white; text-align: center; font-weight: 600; border-color: var(--color-table-header-bg); }
-        #wttp-container tr:nth-child(even) { background-color: var(--color-table-row-even); }
-        #wttp-container .time-calc-table td input { width: 90%; text-align: center; padding: 8px 5px; box-sizing: border-box; }
-        #wttp-container #readingCalcTable td:last-child input { background-color: var(--color-table-result-bg); font-weight: bold; color: var(--color-table-result-text); border: 1px solid var(--color-table-result-text); }
-        #wttp-container .schedule-table th:nth-child(2), #wttp-container .schedule-table th:nth-child(3) { text-align: center; }
-        #wttp-container .schedule-table input { padding: 6px 3px; text-align: center; }
-        #wttp-container .schedule-table td:nth-child(4), #wttp-container .schedule-table td:nth-child(5), #wttp-container .schedule-table td:nth-child(6) { text-align: center; font-weight: 500; }
-        #wttp-container .schedule-table td:nth-child(4) strong { color: var(--color-schedule-start-time); }
-        #wttp-container .review-row td { background-color: var(--color-review-bg-light) !important; font-weight: bold; }
-        #wttp-container .review-row td:last-child { background-color: var(--color-review-bg-dark) !important; }
-        #wttp-container .review-row input[readonly] { background-color: var(--color-border-light) !important; }
-        #wttp-container .results-section { border-top: 2px dashed var(--color-border-light); padding-top: 25px; margin-top: 30px; }
-        #wttp-container #scheduleTable p { font-style: italic; color: var(--color-text-header); }
-        #wttp-container #totalDuration { display: none; }
-        #wttp-container .warning { color: var(--color-warning-text); font-weight: bold; margin-top: 15px; padding: 10px; border: 1px solid var(--color-warning-border); background-color: var(--color-warning-bg); border-radius: 5px; display: inline-block; }
-        #wttp-container .warning strong { color: var(--color-warning-strong); }
-        #wttp-container .success { color: #155724; font-weight: bold; margin-top: 15px; padding: 10px; border: 1px solid #c3e6cb; background-color: #d4edda; border-radius: 5px; display: inline-block; }
-        #wttp-container .success strong { color: #0d4219; }
-        #wttp-container.dark-mode .success { color: #7fdb7f; border-color: #2d5a2d; background-color: #1a3d1a; }
-        #wttp-container.dark-mode .success strong { color: #a3f0a3; }
-        #wttp-container #manualModeInputs, #wttp-container #scheduleTable { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-        #wttp-container #readingCalcTable, #wttp-container .schedule-table { min-width: 520px; }
-        @media (max-width: 480px) { #wttp-container .container { padding: 16px; margin: 12px auto; } #wttp-container .step-one .common-inputs, #wttp-container .step-two .common-inputs { gap: 12px; } #wttp-container h1 { font-size: 1.6em; } #wttp-container h2 { font-size: 1.25em; } #wttp-container button:not(.toggle-button) { padding: 10px 16px; } }
-        #wttp-container input[type="number"] { -moz-appearance: textfield; }
-        #wttp-container input[type="number"]::-webkit-outer-spin-button, #wttp-container input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-        @media (prefers-reduced-motion: reduce) { #wttp-container * { transition: none !important; animation: none !important; } }
-        
-        /* --- 3. Scoped CSS for CLM Time Tracker --- */
-        #clm-container { --bg: #f8fafc; --panel: #ffffff; --text: #0f172a; --muted: #4b5563; --accent: #2563eb; --accent-600: #1d4ed8; --border: #e5e7eb; --ok: #16a34a; --ok-600: #15803d; --bad: #dc2626; --bad-600: #b91c1c; --warning: #f59e0b; --warning-600: #d97706; --shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 6px 16px rgba(0, 0, 0, .12); --config-border: #5B3C88; --block-a-border: #3C7E8A; --block-b-border: #D68F01; --block-c-border: #BF2F14; --block-a-bg: #DEEDF0; --block-b-bg: #fef9f1; --block-c-bg: #fbeceb; --heading-color: #1d4ed8; }
-        #clm-container[data-theme="dark"] { --bg: #121212; --panel: #1e1e1e; --text: #e6e9ef; --muted: #a7b0c0; --accent: #4f8cff; --accent-600: #2f6fe6; --border: #2a2f3a; --ok: #2ec27e; --ok-600: #15803d; --bad: #ff5d5d; --bad-600: #b91c1c; --warning: #facc15; --warning-600: #eab308; --shadow: 0 1px 2px rgba(0, 0, 0, .25), 0 6px 16px rgba(0, 0, 0, .25); --config-border: #5B3C88; --block-a-border: #3C7E8A; --block-b-border: #D68F01; --block-c-border: #BF2F14; --block-a-bg: #152C31; --block-b-bg: #352e1a; --block-c-bg: #331c1c; --heading-color: #8ab4f8; }
-        #clm-container { font: 16px/2.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: var(--text); background: var(--bg); padding: 20px; }
-        #clm-container .container { max-width: 1100px; margin: 30px auto; }
-        #clm-container .header-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 0; }
-        #clm-container .toggle-button { display: flex; align-items: center; justify-content: center; margin: 0; background: none; border: 1px solid var(--border); color: var(--text); font-size: 1.5em; padding: 5px 10px; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
-        #clm-container .toggle-button:hover { background-color: var(--border); border-color: var(--accent); }
-        #clm-container .lead-description { color: var(--muted); font-size: .95rem; line-height: 1.5; margin-top: 5px; margin-bottom: 20px; }
-        #clm-container h1 { font-size: 2.2rem; margin: 0; color: var(--heading-color); }
-        #clm-container .panel, #clm-container .schedule-block { background: var(--panel); border: 2px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); padding: 14px; }
-        #clm-container .config-panel { border-color: var(--config-border); }
-        #clm-container .block-a { border-color: var(--block-a-border); background: var(--block-a-bg); }
-        #clm-container .block-b { border-color: var(--block-b-border); background: var(--block-b-bg); }
-        #clm-container .block-c { border-color: var(--block-c-border); background: var(--block-c-bg); }
-        #clm-container .schedule-block h3 { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif; font-weight: 600; }
-        #clm-container .grid { display: grid; gap: 12px; }
-        #clm-container .row { display: grid; gap: 10px; grid-template-columns: 1fr; }
-        @media (min-width: 560px) { #clm-container .row-2 { grid-template-columns: 1fr 1fr; } }
-        @media (min-width: 740px) { #clm-container .row-3 { grid-template-columns: 1fr; } }
-        #clm-container fieldset { border: none; margin: 0; padding: 0; }
-        #clm-container legend { font-weight: 600; margin-bottom: 6px; }
-        #clm-container label { display: block; font-size: .85rem; color: var(--muted); margin-bottom: 4px; }
-        #clm-container input, #clm-container button { font: inherit; }
-        #clm-container input[type="text"], #clm-container input[type="time"] { width: 100%; box-sizing: border-box; padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--panel); color: var(--text); }
-        #clm-container input[data-actual-duration][readonly], #clm-container input#meetingEnd[readonly] { background: var(--border); cursor: default; opacity: 0.8; }
-        #clm-container .btn { appearance: none; border: 1px solid var(--border); background: var(--panel); color: var(--text); padding: 10px 14px; border-radius: 10px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; }
-        #clm-container .btn.primary { background: var(--accent); border-color: var(--accent-600); color: #fff; }
-        #clm-container .btn.ghost { background: transparent; }
-        #clm-container .btn.ok { background: var(--ok); color: white; border-color: var(--ok-600); }
-        #clm-container .btn.warn { background: var(--bad); color: white; border-color: var(--bad-600); }
-        #clm-container .btn-icon { background: none; border: none; color: var(--muted); cursor: pointer; padding: 0; margin-left: 8px; line-height: 1; transition: color 0.2s; }
+        #clm-container .btn-icon { background: none; border: none; color: var(--muted); cursor: pointer; padding: 0; margin-left: 6px; line-height: 1; transition: color 0.2s; }
         #clm-container .btn-icon:hover { color: var(--bad); }
-        #clm-container h1 .material-symbols-outlined { font-size: 1.1em; margin-left: 10px; vertical-align: center }
+        #clm-container h1 .material-symbols-outlined { font-size: 1.1em; margin-left: 8px; vertical-align: center }
         #clm-container .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
-        #clm-container .toolbar { display: flex; gap: 8px; flex-wrap: wrap; }
-        #clm-container .schedule-block { margin-bottom: 20px; }
-        #clm-container .schedule { display: grid; gap: 10px; }
-        #clm-container .seg { border: 1px dashed var(--border); border-radius: 10px; padding: 10px; display: grid; gap: 8px; background: var(--panel); }
+        #clm-container .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        
+        #clm-container .schedule { display: grid; gap: 6px; }
+        #clm-container .seg { border: 1px dashed var(--border); border-radius: 8px; padding: 8px 12px; display: grid; gap: 6px; background: var(--panel); }
         #clm-container .seg-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-        #clm-container .seg-title { font-weight: 600; }
+        #clm-container .seg-title { font-weight: 600; font-size: 0.95em; }
         #clm-container .seg-meta { display: flex; align-items: center; }
         #clm-container .seg-grid { display: grid; gap: 8px; grid-template-columns: 1fr; }
-        @media (min-width: 640px) { #clm-container .seg-grid { grid-template-columns: 1fr 1fr 1fr; align-items: end; } }
-        #clm-container .time-control-group { display: flex; flex-direction: column; gap: 4px; }
+        @media (min-width: 640px) { #clm-container .seg-grid { grid-template-columns: 1fr 1.5fr; align-items: end; } }
+        #clm-container .time-control-group { display: flex; flex-direction: column; gap: 2px; }
         #clm-container .time-control-group label { margin-bottom: 0; }
         #clm-container .time-control-group input { margin-top: 0; }
-        #clm-container .target-duration-group { display: flex; flex-direction: column; gap: 4px; }
+        #clm-container .target-duration-group { display: flex; flex-direction: column; gap: 2px; }
         #clm-container .target-duration-group label { margin-bottom: 0; }
-        #clm-container .time-control-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        #clm-container .time-control-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
         #clm-container .clock { font-variant-numeric: tabular-nums; letter-spacing: .3px; }
-        #clm-container .pill { font-size: .8rem; border-radius: 999px; padding: 4px 8px; border: 1px solid var(--border); color: var(--muted); }
+        #clm-container .pill { font-size: .75rem; border-radius: 999px; padding: 2px 6px; border: 1px solid var(--border); color: var(--muted); }
         #clm-container .pill.ok { background: var(--ok); color: white; border-color: var(--ok-600); }
         #clm-container .pill.bad { background: var(--bad); color: white; border-color: var(--bad-600); }
         #clm-container .pill.warn-time { background: var(--warning); color: white; border-color: var(--warning-600); }
         #clm-container .pill.target-time { background: var(--border); color: var(--text); }
-        #clm-container .hint { color: var(--muted); font-size: .9rem; }
+        #clm-container .hint { color: var(--muted); font-size: .85rem; }
         #clm-container .btn-icon[data-reset]:hover { color: var(--warning-600); }
         #clm-container .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); display: flex; align-items: center; justify-content: center; z-index: 2000; padding: 15px; box-sizing: border-box; }
-        #clm-container .modal-content { background: var(--panel); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); max-width: 400px; width: 100%; text-align: center; border: 1px solid var(--border); }
-        #clm-container .modal-content h3 { margin-top: 0; color: var(--text); }
-        #clm-container .modal-content p { color: var(--muted); line-height: 1.6; margin-bottom: 24px; }
-        #clm-container .modal-buttons { display: flex; justify-content: flex-end; gap: 12px; }
-        #clm-container .share-options { text-align: left; margin-bottom: 24px; }
-        #clm-container .share-options .option { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-        #clm-container .share-options label { color: var(--text); font-size: 1rem; margin: 0; }
-        #clm-container .share-options input[type="checkbox"] { width: 1.2em; height: 1.2em; }
-        #clm-container .share-options fieldset { border: 1px solid var(--border); padding: 10px 15px; border-radius: 8px; margin-top: 15px; }
-        #clm-container .share-options legend { padding: 0 5px; font-size: .9rem; }
+        #clm-container .modal-content { background: var(--panel); padding: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); max-width: 400px; width: 100%; text-align: center; border: 1px solid var(--border); }
+        #clm-container .modal-content h3 { margin-top: 0; color: var(--text); margin-bottom: 12px; }
+        #clm-container .modal-content p { color: var(--muted); line-height: 1.5; margin-bottom: 20px; font-size: 0.9em; }
+        #clm-container .modal-buttons { display: flex; justify-content: flex-end; gap: 10px; }
+        #clm-container .share-options { text-align: left; margin-bottom: 20px; }
+        #clm-container .share-options .option { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+        #clm-container .share-options label { color: var(--text); font-size: 0.95rem; margin: 0; }
+        #clm-container .share-options input[type="checkbox"] { width: 1.1em; height: 1.1em; }
+        #clm-container .share-options fieldset { border: 1px solid var(--border); padding: 8px 12px; border-radius: 8px; margin-top: 10px; }
+        #clm-container .share-options legend { padding: 0 5px; font-size: .85rem; }
 
         /* --- 4. Scoped CSS for CBS Timing Assist --- */
         #cbs-container {
@@ -273,6 +201,7 @@
             --block-meditate-border: #1d7a46; --block-meditate-bg: #e8f5ee;
             --pill-bg: #e9ecef; --pill-text: #343a40;
         }
+        
         #cbs-container.dark-mode {
             --color-bg-body: #121212; --color-bg-container: #1e1e1e; --color-text-body: #e0e0e0; --color-text-header: #f5b34c;
             --color-primary: #b295e0; --color-primary-dark: #c9b6ec; --color-border-light: #333333; --color-border-input: #444444;
@@ -356,7 +285,7 @@
                 </button>
             </div>
             <p>Use the two steps below to first determine individual paragraph reading times, and then calculate the full meeting schedule.</p>
-            <p><p style="font-size: 0.95em; color: var(--color-text-body); margin-top: -10px; margin-bottom: 15px;">TIP: For time fields (MM:SS), type only numbers (MMSS) and the time will be formatted automatically.</p>
+            <p style="font-size: 0.95em; color: var(--color-text-body); margin-top: -10px; margin-bottom: 15px;">TIP: For time fields (MM:SS), type only numbers (MMSS) and the time will be formatted automatically.</p>
             <div class="step-one">
                 <h2>Step 1: Calculate Individual Paragraph Reading Times</h2>
                 <div class="mode-toggle-container">
@@ -370,7 +299,6 @@
                 </div>
                 <p id="avgTimeResult" style="font-style: italic; color: var(--color-primary); margin: 0 0 20px 0;"></p>
                 
-                <!-- NEW: CSV Import Section -->
                 <div class="input-group" style="margin-bottom: 20px; padding: 15px; background-color: var(--color-border-light); border-radius: 8px;">
                     <label style="display: block; margin-bottom: 8px; font-weight: 600;">Import Paragraph Durations from CSV:</label>
                     <input type="file" id="csvFileInput" accept=".csv" style="display: none;" onchange="wttp_importCSV(event)">
@@ -399,7 +327,6 @@
         </div>
     </div>
 
-    <!-- ... CLM Tab Code remains exactly as before ... -->
     <div id="clm-container" class="tab-content" style="display: none;">
         <div class="container">
             <div class="header-controls">
@@ -415,13 +342,11 @@
                     <fieldset class="grid">
                         <legend>MEETING CONFIGURATION</legend>
                         <div class="row row-2">
-                            <div><label for="meetingStart">Meeting Start Time (Clock):</label><input id="meetingStart" type="time" /></div>
+                            <div><label for="meetingStart">Meeting Start Time (Clock):</label><input id="meetingStart" type="time" value="19:30" /></div>
                             <div><label for="meetingEnd">Target Meeting End Time:</label><input id="meetingEnd" type="time" readonly /></div>
                         </div>
-                        <div class="row row-3">
-                            <div><label>Live Clock (HH:MM:SS):</label><div id="liveClock" class="clock">--:--:--</div></div>
-                        </div>
-                        <div class="toolbar" style="margin-top: 15px;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 6px; padding-bottom: 2px;">
+                            <div><label>Live Clock (HH:MM:SS):</label><div id="liveClock" class="clock" style="font-size: 1.15em; line-height: 1;">--:--:--</div></div>
                             <button id="generateReportBtn" class="btn primary" type="button"><span class="material-symbols-outlined">share</span> Share</button>
                         </div>
                     </fieldset>
@@ -435,11 +360,16 @@
                     <div id="schedule-a" class="schedule"></div>
                 </div>
                 <div class="schedule-block block-b">
-                    <h3>APPLY YOURSELF TO THE MINISTRY</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <h3 style="margin: 0;">APPLY YOURSELF TO THE MINISTRY</h3>
+                    </div>
                     <div id="schedule-b" class="schedule"></div>
+                    <div style="margin-top: 10px; display: flex; justify-content: flex-end;">
+                        <button id="addSegB" class="btn primary" type="button" data-block="B">Add Part</button>
+                    </div>
                 </div>
                 <div class="schedule-block block-c">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
                         <h3 style="margin: 0;">LIVING AS CHRISTIANS</h3>
                         <button id="addSegC" class="btn primary" type="button" data-block="C">Add Part</button>
                     </div>
@@ -452,6 +382,7 @@
                 </div>
             </section>
         </div>
+        
         <template id="segTemplate">
             <div class="seg" data-id="">
                 <div class="seg-head">
@@ -465,19 +396,17 @@
                 </div>
                 <div class="seg-grid">
                     <div class="target-duration-group">
-                        <label></label>
-                        <div class="time-control-buttons" style="gap: 8px;"><label>Target Time (MM:SS)</label><label>Actual Time (MM:SS)</label></div>
-                        <div class="time-control-buttons" style="gap: 8px;"><input type="text" data-target inputmode="numeric" placeholder="05:00" maxlength="5" /><input type="text" data-actual-duration readonly style="width: 100%;" /></div>
+                        <div class="time-control-buttons" style="gap: 6px;"><label>Target Time</label><label>Actual Time</label></div>
+                        <div class="time-control-buttons" style="gap: 6px;"><input type="text" data-target inputmode="numeric" placeholder="05:00" maxlength="5" /><input type="text" data-actual-duration readonly style="width: 100%;" /></div>
                     </div>
                     <div class="time-control-group">
-                        <label></label>
-                        <div class="time-control-buttons"><button class="btn ok" data-start-now type="button">Start</button><button class="btn warn" data-end-now type="button">End</button></div>
-                        <div class="time-control-buttons" style="gap: 8px;"><input type="text" data-start readonly style="width: 100%;" placeholder="--:--:--" /><input type="text" data-end readonly style="width: 100%;" placeholder="--:--:--" /></div>
+                        <div class="time-control-buttons" style="gap: 6px;"><button class="btn ok" data-start-now type="button">Start</button><button class="btn warn" data-end-now type="button">End</button></div>
+                        <div class="time-control-buttons" style="gap: 6px;"><input type="text" data-start readonly style="width: 100%;" placeholder="--:--:--" /><input type="text" data-end readonly style="width: 100%;" placeholder="--:--:--" /></div>
                     </div>
-                    <div></div>
                 </div>
             </div>
         </template>
+        
         <div id="resetConfirmationModal" class="modal-overlay" style="display: none;">
             <div class="modal-content">
                 <h3>Confirm Reset</h3>
@@ -533,7 +462,6 @@
         </div>
     </div>
 
-    <!-- ... CBS Timing Assist Tab ... -->
     <div id="cbs-container" class="tab-content" style="display: none;">
         <div class="container">
             <div class="header-controls">
@@ -807,7 +735,6 @@
                 wttp_calculateFullSchedule();
             }
 
-            // NEW: Robust CSV Time Parser (Accepts raw seconds cleanly)
             window.csvTimeToSeconds = function(timeStr) {
                 if (!timeStr) return NaN;
                 timeStr = timeStr.toString().trim();
@@ -822,7 +749,6 @@
                 }
             }
 
-            // NEW: CSV Import Functionality
             window.wttp_importCSV = function(event) {
                 const file = event.target.files[0];
                 if (!file) return;
@@ -831,7 +757,7 @@
                 reader.onload = function(e) {
                     const text = e.target.result;
                     wttp_parseAndApplyCSV(text);
-                    event.target.value = ''; // Reset input
+                    event.target.value = '';
                 };
                 reader.readAsText(file);
             }
@@ -840,7 +766,6 @@
                 const lines = csvText.split(/\r?\n/).map(l => l.trim()).filter(l => l);
                 if (lines.length === 0) return;
 
-                // Check if the first row is a header
                 let dataLines = lines;
                 if (isNaN(parseInt(lines[0].replace(/[^0-9]/g, '').charAt(0)))) {
                     dataLines = lines.slice(1);
@@ -881,7 +806,6 @@
                         durationStr = parts[0];
                     }
 
-                    // Check for hard 0s which user requested to be flagged in red
                     if (startStr === '0' || startStr === '00:00' || 
                         endStr === '0' || endStr === '00:00' || 
                         durationStr === '0' || durationStr === '00:00') {
@@ -901,7 +825,7 @@
 
                     if (isNaN(durationSecs) || durationSecs <= 0) {
                         durationSecs = 0;
-                        hasZero = true; // Duration evaluated to 0, flag it
+                        hasZero = true;
                     }
 
                     localStorage.setItem(`readingTime_${pNum}`, durationSecs);
@@ -917,7 +841,6 @@
                     if (calcInput) {
                         calcInput.value = durationSecs;
                         
-                        // Populate start and end fields automatically if missing so we don't wipe data on recalculate
                         if (!startStr && !endStr && durationSecs > 0) {
                             if (startInput) startInput.value = '00:00';
                             if (endInput) endInput.value = minutesToMMSS(durationSecs / 60);
@@ -965,7 +888,6 @@
                     const existingAnswerInput = document.getElementById(`sch_answer_${i}`);
                     const answerValue = existingAnswerInput ? existingAnswerInput.value : minutesToMMSS(defaultAnswerTime);
                     
-                    // If flagged as 0, format it red in the final schedule table too
                     const styleStr = (hasZero || calculatedReadingTimeSecs === 0) ? 'background-color: #f8d7da; color: #721c24; border-color: #f5c6cb;' : '';
 
                     html += `<tr><td>Paragraph ${i}</td><td><input type="text" id="sch_reading_${i}" value="${readingValue}" maxlength="5" oninput="wttp_formatTime(this)" onchange="wttp_updateSchedule()" style="${styleStr}"></td><td><input type="text" id="sch_answer_${i}" value="${answerValue}" maxlength="5" oninput="wttp_formatTime(this)" onchange="wttp_updateSchedule()"></td><td id="start_time_${i}"></td><td id="read_end_time_${i}"></td><td id="answer_end_time_${i}"></td></tr>`;
@@ -1085,315 +1007,482 @@
             });
         })();
 
-        // --- CLM Tracker JS remains exactly as before ---
+        // --- 3. Scoped JavaScript for CLM Tracker ---
         (() => {
             const clmContainer = document.getElementById('clm-container');
             const $ = (s, p = clmContainer) => p.querySelector(s);
             const $$ = (s, p = clmContainer) => [...p.querySelectorAll(s)];
             const pad = n => String(n).padStart(2, '0');
             const nowHMS = () => { const d = new Date(); return `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`; };
+            
             const formatTo12h = (hms) => { if (!hms) return ''; const parts = hms.split(':'); let [hours, minutes, seconds] = parts.map(Number); if (isNaN(hours) || isNaN(minutes)) return hms; const ampm = hours >= 12 ? 'PM' : 'AM'; hours = hours % 12; hours = hours || 12; let result = `${hours}:${pad(minutes)}`; if (seconds !== undefined && !isNaN(seconds)) { result += `:${pad(seconds)}`; } result += ` ${ampm}`; return result; };
             const formatTo12h_short = (hms) => { if (!hms) return '--:--'; const parts = hms.split(':'); let [hours, minutes] = parts.map(Number); if (isNaN(hours) || isNaN(minutes)) return '--:--'; const ampm = hours >= 12 ? 'PM' : 'AM'; hours = hours % 12; hours = hours || 12; return `${hours}:${pad(minutes)} ${ampm}`; };
-            const toSec = (mmss) => { if (!mmss) return 0; const m = /^([0-5]?\d):([0-5]\d)$/.exec(mmss.trim()); if (!m) return 0; return parseInt(m[1], 10) * 60 + parseInt(m[2], 10); };
+            
+            // Updated robust toSec parsing to support math calculations during active typing
+            const toSec = (mmss) => { 
+                if (!mmss) return 0; 
+                const cleanStr = String(mmss).trim().replace(/[^0-9:]/g, '');
+                const parts = cleanStr.split(':');
+                if (parts.length >= 2) {
+                    return (parseInt(parts[0], 10) || 0) * 60 + (parseInt(parts[1], 10) || 0);
+                }
+                return parseInt(cleanStr, 10) || 0;
+            };
+            
             const fromSec = (sec) => { const s = Math.max(0, Math.round(sec)); const m = Math.floor(s / 60); const r = s % 60; return `${pad(m)}:${pad(r)}`; };
             const fromSecHMS = (sec) => { const s = Math.max(0, Math.round(sec)); const h = Math.floor(s / 3600); const m = Math.floor((s % 3600) / 60); const r = s % 60; return `${pad(h)}:${pad(m)}:${pad(r)}`; };
             const hmsdiff = (start, end) => { if (!start || !end) return 0; const toSeconds = (hms) => { const parts = hms.split(':').map(Number); if (parts.length === 3) return parts[0] * 3600 + parts[1] * 60 + parts[2]; if (parts.length === 2) return parts[0] * 3600 + parts[1] * 60; return 0; }; let ds = toSeconds(end) - toSeconds(start); if (ds < 0) ds += 24 * 3600; return ds; };
             const clmTimeToMinutes = (timeStr) => { if (!timeStr) return 0; const [hours, minutes] = timeStr.split(':').map(Number); return (hours * 60) + (minutes || 0); }
             const clmMinutesToTime = (totalMinutes, use12Hour = true) => { if (isNaN(totalMinutes)) return '--:--'; const totalMinutesSafe = (totalMinutes % (24 * 60) + (24 * 60)) % (24*60); let hours = Math.floor(totalMinutesSafe / 60); const minutes = Math.round(totalMinutesSafe % 60); if (use12Hour) { const ampm = hours >= 12 ? 'PM' : 'AM'; hours = hours % 12; hours = hours || 12; return `${hours}:${pad(minutes)} ${ampm}`; } else { return `${pad(hours)}:${pad(minutes)}`; } }
 
-            const state = { cfg: { start: '', end: '' }, segments: [] };
+            const state = { cfg: { start: '19:30', end: '21:10' }, segments: [] };
             const els = { liveClock: $('#liveClock'), scheduleA: $('#schedule-a'), scheduleB: $('#schedule-b'), scheduleC: $('#schedule-c'), scheduleM_top: $('#schedule-m-top'), scheduleM_bottom: $('#schedule-m-bottom'), meetingStart: $('#meetingStart'), meetingEnd: $('#meetingEnd'), themeBtn: $('#themeBtn'), themeIcon: $('#themeIcon'), generateReportBtn: $('#generateReportBtn'), resetModal: $('#resetConfirmationModal'), confirmResetBtn: $('#confirmResetBtn'), cancelResetBtn: $('#cancelResetBtn'), shareModal: $('#shareOptionsModal'), confirmShareBtn: $('#confirmShareBtn'), cancelShareBtn: $('#cancelShareBtn'), shareMeetingTimes: $('#shareMeetingTimes'), shareTreasures: $('#shareTreasures'), shareMinistry: $('#shareMinistry'), shareLiving: $('#shareLiving'), shareOverallVariance: $('#shareOverallVariance'), sharePartTimes: $('#sharePartTimes') };
 
-            function save() { localStorage.setItem('clm_timer_fixed', JSON.stringify(state)); }
-            function load() { try { const s = JSON.parse(localStorage.getItem('clm_timer_fixed')); if (s) { Object.assign(state, s); if (state.segments) { state.segments.forEach(seg => seg.isActive = false); } } } catch (e) {} }
+            function save() { localStorage.setItem('clm_timer_v3', JSON.stringify(state)); }
+            function load() { 
+                try { 
+                    const s = JSON.parse(localStorage.getItem('clm_timer_v3')); 
+                    if (s && s.segments) { 
+                        Object.assign(state, s); 
+                        state.segments.forEach(seg => seg.isActive = false);
+                        if (!state.cfg.start) state.cfg.start = '19:30';
+                    } else {
+                        state.segments = defaultTemplate();
+                        state.cfg.start = '19:30';
+                    }
+                } catch (e) {
+                    state.segments = defaultTemplate();
+                    state.cfg.start = '19:30';
+                } 
+            }
+            
             function newSegment({ title = 'Part', target = '05:00', block = 'B', isDynamic = true, bufferAfter = 0, isTimed = true }) { const id = (typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).substring(2); return { id: id, target, start: '', end: '', duration: 0, block, isDynamic, title, bufferAfter, isTimed, isActive: false }; }
-            function defaultTemplate() { return [ newSegment({ title: "Opening Song & Prayer", target: '05:00', block: 'M_TOP', isDynamic: false, isTimed: false }), newSegment({ title: "Opening Comments", target: '01:00', block: 'M_TOP', isDynamic: false }), newSegment({ title: "Talk", target: '10:00', block: 'A', isDynamic: false }), newSegment({ title: "Spiritual Gems", target: '10:00', block: 'A', isDynamic: false }), newSegment({ title: "Bible Reading", target: '04:00', block: 'A', isDynamic: false, bufferAfter: 1 }), newSegment({ title: "Assignment 1", target: '02:00', block: 'B', isDynamic: false, bufferAfter: 1 }), newSegment({ title: "Assignment 2", target: '02:00', block: 'B', isDynamic: false, bufferAfter: 1 }), newSegment({ title: "Assignment 3", target: '02:00', block: 'B', isDynamic: false, bufferAfter: 1 }), newSegment({ title: "Assignment 4", target: '05:00', block: 'B', isDynamic: false, bufferAfter: 1 }), newSegment({ title: "Living as Christians Song", target: '05:00', block: 'C', isDynamic: false, isTimed: false }), newSegment({ title: "Part 1", target: '15:00', block: 'C', isDynamic: false }), newSegment({ title: "Congregation Bible Study", target: '30:00', block: 'C', isDynamic: false }), newSegment({ title: "Closing Comments", target: '03:00', block: 'M_BOTTOM', isDynamic: false }), newSegment({ title: "Closing Song & Prayer", target: '05:00', block: 'M_BOTTOM', isDynamic: false, isTimed: false }) ]; }
+            
+            function defaultTemplate() { 
+                return [ 
+                    newSegment({ title: "Opening Song & Prayer", target: '05:00', block: 'M_TOP', isDynamic: false, isTimed: false }), 
+                    newSegment({ title: "Opening Comments", target: '01:00', block: 'M_TOP', isDynamic: false }), 
+                    newSegment({ title: "Talk", target: '10:00', block: 'A', isDynamic: false }), 
+                    newSegment({ title: "Spiritual Gems", target: '10:00', block: 'A', isDynamic: false }), 
+                    newSegment({ title: "Bible Reading", target: '04:00', block: 'A', isDynamic: false, bufferAfter: 1 }), 
+                    
+                    // Ministry Default Block with 3 Parts, Dynamic and Removable
+                    newSegment({ title: "Assignment 1", target: '02:00', block: 'B', isDynamic: true, bufferAfter: 1 }), 
+                    newSegment({ title: "Assignment 2", target: '02:00', block: 'B', isDynamic: true, bufferAfter: 1 }), 
+                    newSegment({ title: "Assignment 3", target: '02:00', block: 'B', isDynamic: true, bufferAfter: 1 }), 
+                    
+                    newSegment({ title: "Living as Christians Song", target: '05:00', block: 'C', isDynamic: false, isTimed: false }), 
+                    newSegment({ title: "Part 1", target: '15:00', block: 'C', isDynamic: false }), 
+                    newSegment({ title: "Congregation Bible Study", target: '30:00', block: 'C', isDynamic: false }), 
+                    newSegment({ title: "Closing Comments", target: '03:00', block: 'M_BOTTOM', isDynamic: false }), 
+                    newSegment({ title: "Closing Song & Prayer", target: '05:00', block: 'M_BOTTOM', isDynamic: false, isTimed: false }) 
+                ]; 
+            }
+            
             function render() { els.scheduleA.innerHTML = ''; els.scheduleB.innerHTML = ''; els.scheduleC.innerHTML = ''; els.scheduleM_top.innerHTML = ''; els.scheduleM_bottom.innerHTML = ''; state.segments.forEach((seg, i) => addSegRow(seg, i + 1)); els.meetingStart.value = state.cfg.start || ''; calculateTargetStartTimes(); }
-            function addSegRow(seg, index) { const node = $('#segTemplate').content.firstElementChild.cloneNode(true); node.dataset.id = seg.id; $('[data-title]', node).textContent = seg.title; const targetInput = $('[data-target]', node); const startInput = $('[data-start]', node); const endInput = $('[data-end]', node); const actualDurationInput = $('[data-actual-duration]', node); targetInput.value = seg.target || '05:00'; startInput.value = formatTo12h(seg.start); endInput.value = formatTo12h(seg.end); actualDurationInput.value = fromSec(seg.duration || hmsdiff(seg.start, seg.end)); updateVariance(node, seg); if (seg.isTimed === false) { const grid = $('.seg-grid', node); if (grid) grid.style.display = 'none'; const variancePill = $('[data-variance]', node); if (variancePill) variancePill.style.display = 'none'; const resetButton = $('[data-reset]', node); if (resetButton) resetButton.style.display = 'none'; } if (seg.isDynamic) { const deleteButton = $('[data-delete]', node); deleteButton.style.display = 'inline-block'; deleteButton.addEventListener('click', () => deleteSegment(seg.id)); } targetInput.addEventListener('input', e => { seg.target = e.target.value; calcSeg(seg, node); calculateTargetStartTimes(); save(); }); $('[data-start-now]', node).addEventListener('click', () => { const now24h = nowHMS(); const previouslyActive = state.segments.find(s => s.isActive); if (previouslyActive && previouslyActive.id !== seg.id) { previouslyActive.isActive = false; const oldNode = $(`[data-id="${previouslyActive.id}"]`); if (oldNode) updateVariance(oldNode, previouslyActive); } seg.start = now24h; startInput.value = formatTo12h(now24h); seg.end = ''; endInput.value = ''; seg.duration = 0; $('[data-actual-duration]', node).value = fromSec(0); seg.isActive = true; save(); }); $('[data-end-now]', node).addEventListener('click', () => { seg.isActive = false; const now24h = nowHMS(); if(seg.start) { seg.end = now24h; endInput.value = formatTo12h(now24h); } calcSeg(seg, node); save(); }); $('[data-reset]', node).addEventListener('click', () => { els.resetModal.style.display = 'flex'; els.resetModal.dataset.segmentIdToReset = seg.id; }); if (seg.block === 'A') els.scheduleA.appendChild(node); else if (seg.block === 'B') els.scheduleB.appendChild(node); else if (seg.block === 'C') els.scheduleC.appendChild(node); else if (seg.block === 'M_TOP') els.scheduleM_top.appendChild(node); else if (seg.block === 'M_BOTTOM') els.scheduleM_bottom.appendChild(node); }
+            
+            function addSegRow(seg, index) { 
+                const node = $('#segTemplate').content.firstElementChild.cloneNode(true); 
+                node.dataset.id = seg.id; 
+                $('[data-title]', node).textContent = seg.title; 
+                const targetInput = $('[data-target]', node); 
+                const startInput = $('[data-start]', node); 
+                const endInput = $('[data-end]', node); 
+                const actualDurationInput = $('[data-actual-duration]', node); 
+                
+                targetInput.value = seg.target || '05:00'; 
+                startInput.value = formatTo12h(seg.start); 
+                endInput.value = formatTo12h(seg.end); 
+                actualDurationInput.value = fromSec(seg.duration || hmsdiff(seg.start, seg.end)); 
+                updateVariance(node, seg); 
+                
+                if (seg.isTimed === false) { 
+                    const grid = $('.seg-grid', node); if (grid) grid.style.display = 'none'; 
+                    const variancePill = $('[data-variance]', node); if (variancePill) variancePill.style.display = 'none'; 
+                    const resetButton = $('[data-reset]', node); if (resetButton) resetButton.style.display = 'none'; 
+                } 
+                
+                if (seg.isDynamic) { 
+                    const deleteButton = $('[data-delete]', node); 
+                    deleteButton.style.display = 'inline-block'; 
+                    deleteButton.addEventListener('click', () => deleteSegment(seg.id)); 
+                } 
+                
+                // Format target time immediately during typing for live math updates
+                targetInput.addEventListener('input', e => { 
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 4) value = value.substring(0, 4);
+                    if (value.length >= 3) {
+                        value = value.slice(0, -2) + ':' + value.slice(-2);
+                    }
+                    e.target.value = value;
+                    seg.target = value; 
+                    calcSeg(seg, node); 
+                    calculateTargetStartTimes(); 
+                    save(); 
+                }); 
+
+                // Ensure single digits turn into accurate times on blur
+                targetInput.addEventListener('blur', e => {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 0 && value.length <= 2) {
+                        value = value.padStart(2, '0') + ':00';
+                    } else if (value.length >= 3) {
+                        value = value.slice(0, -2).padStart(2, '0') + ':' + value.slice(-2);
+                    } else {
+                        value = "00:00";
+                    }
+                    e.target.value = value;
+                    seg.target = value;
+                    calcSeg(seg, node);
+                    calculateTargetStartTimes();
+                    save();
+                });
+                
+                $('[data-start-now]', node).addEventListener('click', () => { const now24h = nowHMS(); const previouslyActive = state.segments.find(s => s.isActive); if (previouslyActive && previouslyActive.id !== seg.id) { previouslyActive.isActive = false; const oldNode = $(`[data-id="${previouslyActive.id}"]`); if (oldNode) updateVariance(oldNode, previouslyActive); } seg.start = now24h; startInput.value = formatTo12h(now24h); seg.end = ''; endInput.value = ''; seg.duration = 0; $('[data-actual-duration]', node).value = fromSec(0); seg.isActive = true; save(); }); 
+                $('[data-end-now]', node).addEventListener('click', () => { seg.isActive = false; const now24h = nowHMS(); if(seg.start) { seg.end = now24h; endInput.value = formatTo12h(now24h); } calcSeg(seg, node); save(); }); 
+                $('[data-reset]', node).addEventListener('click', () => { els.resetModal.style.display = 'flex'; els.resetModal.dataset.segmentIdToReset = seg.id; }); 
+                
+                if (seg.block === 'A') els.scheduleA.appendChild(node); 
+                else if (seg.block === 'B') els.scheduleB.appendChild(node); 
+                else if (seg.block === 'C') els.scheduleC.appendChild(node); 
+                else if (seg.block === 'M_TOP') els.scheduleM_top.appendChild(node); 
+                else if (seg.block === 'M_BOTTOM') els.scheduleM_bottom.appendChild(node); 
+            }
+            
             function resetSegment(segmentId) { const seg = state.segments.find(s => s.id === segmentId); if (!seg) return; seg.start = ''; seg.end = ''; seg.duration = 0; seg.isActive = false; const node = $(`[data-id="${segmentId}"]`); if (node) { $('[data-start]', node).value = ''; $('[data-end]', node).value = ''; $('[data-actual-duration]', node).value = fromSec(0); updateVariance(node, seg); } save(); }
             function calcSeg(seg, node) { seg.duration = hmsdiff(seg.start, seg.end); $('[data-actual-duration]', node).value = fromSec(seg.duration); updateVariance(node, seg); save(); }
             function updateVariance(node, seg) { if (seg.isActive) return; const delta = seg.duration - toSec(seg.target); const pill = $('[data-variance]', node); pill.textContent = `Δ ${delta >= 0 ? '+' : ''}${fromSec(Math.abs(delta))}`; pill.classList.remove('ok', 'bad', 'warn-time'); if (seg.duration > 0) { if (delta <= 0) pill.classList.add('ok'); else if (delta > 0) pill.classList.add('bad'); } }
+            
             function masterClockTick() { const activeSegment = state.segments.find(s => s.isActive); if (!activeSegment) return; const node = $(`[data-id="${activeSegment.id}"]`); if (!node) return; const elapsedSeconds = hmsdiff(activeSegment.start, nowHMS()); const targetSeconds = toSec(activeSegment.target); const remainingSeconds = targetSeconds - elapsedSeconds; const pill = $('[data-variance]', node); pill.classList.remove('ok', 'bad', 'warn-time'); if (remainingSeconds > 20) { pill.textContent = fromSec(remainingSeconds); pill.classList.add('ok'); } else if (remainingSeconds >= 0) { pill.textContent = fromSec(remainingSeconds); pill.classList.add('warn-time'); } else { pill.textContent = `+${fromSec(Math.abs(remainingSeconds))}`; pill.classList.add('bad'); } }
+            
             function calculateTargetStartTimes() { const meetingStartStr = state.cfg.start; if (!meetingStartStr) { $$('.seg [data-target-start-time]').forEach(el => el.textContent = '--:--'); els.meetingEnd.value = ''; return; } let currentMinutes = clmTimeToMinutes(meetingStartStr); let finalEndTimeMinutes = currentMinutes; state.segments.forEach(seg => { const segNode = $(`[data-id="${seg.id}"]`); if (segNode) { const targetStartTimeEl = $('[data-target-start-time]', segNode); if (targetStartTimeEl) { targetStartTimeEl.textContent = clmMinutesToTime(currentMinutes, true); } } const segmentDurationMins = (toSec(seg.target) / 60) + (seg.bufferAfter || 0); currentMinutes += segmentDurationMins; if (seg.isTimed !== false) { finalEndTimeMinutes = currentMinutes; } }); els.meetingEnd.value = clmMinutesToTime(finalEndTimeMinutes, false); state.cfg.end = els.meetingEnd.value; }
-            function addSegmentToBlock(blockName) { if (blockName === 'C') { let studyIndex = state.segments.findIndex(s => s.title === "Congregation Bible Study"); const newSeg = newSegment({ title: 'Living as Christians Part', target: '15:00', block: 'C', isDynamic: true, bufferAfter: 0 }); if (studyIndex !== -1) { state.segments.splice(studyIndex, 0, newSeg); } else { let targetIndex = -1; for (let i = state.segments.length - 1; i >= 0; i--) { if (state.segments[i].block === 'C') { targetIndex = i; break; } } state.segments.splice(targetIndex > -1 ? targetIndex + 1 : state.segments.length, 0, newSeg); } } render(); save(); }
+            
+            function addSegmentToBlock(blockName) { 
+                if (blockName === 'B') {
+                    const newSeg = newSegment({ title: 'Ministry Part', target: '05:00', block: 'B', isDynamic: true, bufferAfter: 1 });
+                    let targetIndex = -1;
+                    for (let i = state.segments.length - 1; i >= 0; i--) { if (state.segments[i].block === 'B') { targetIndex = i; break; } }
+                    state.segments.splice(targetIndex > -1 ? targetIndex + 1 : state.segments.length, 0, newSeg);
+                }
+                else if (blockName === 'C') { 
+                    let studyIndex = state.segments.findIndex(s => s.title === "Congregation Bible Study"); 
+                    const newSeg = newSegment({ title: 'Living as Christians Part', target: '15:00', block: 'C', isDynamic: true, bufferAfter: 0 }); 
+                    if (studyIndex !== -1) { state.segments.splice(studyIndex, 0, newSeg); } 
+                    else { let targetIndex = -1; for (let i = state.segments.length - 1; i >= 0; i--) { if (state.segments[i].block === 'C') { targetIndex = i; break; } } state.segments.splice(targetIndex > -1 ? targetIndex + 1 : state.segments.length, 0, newSeg); } 
+                } 
+                render(); 
+                save(); 
+            }
+            
             function deleteSegment(id) { state.segments = state.segments.filter(seg => seg.id !== id); render(); save(); }
+            
             function generateReportText(options) { let report = `CLM Meeting Variance Report\n--------------------------------------\n`; if (options.includeTimes) { report += `Meeting Target Start: ${state.cfg.start ? formatTo12h_short(state.cfg.start + ':00') : 'N/A'}\n`; report += `Meeting Target End: ${state.cfg.end ? formatTo12h_short(state.cfg.end + ':00') : 'N/A'}\n`; } const blocks = { 'A': { title: 'TREASURES FROM GOD\'S WORD', segments: [], include: options.includeTreasures }, 'B': { title: 'APPLY YOURSELF TO THE MINISTRY', segments: [], include: options.includeMinistry }, 'C': { title: 'LIVING AS CHRISTIANS', segments: [], include: options.includeLiving } }; state.segments.forEach(seg => { if (blocks[seg.block]) blocks[seg.block].segments.push(seg); }); let totalTargetSeconds = 0, totalActualSeconds = 0; for (const blockKey in blocks) { const block = blocks[blockKey]; if (block.include && block.segments.length > 0) { report += `\n== ${block.title} ==\n`; block.segments.forEach((seg) => { if (seg.isTimed === false) return; const targetSec = toSec(seg.target), actualSec = seg.duration || hmsdiff(seg.start, seg.end); const deltaSec = actualSec - targetSec; if (actualSec > 0) { totalTargetSeconds += targetSec; totalActualSeconds += actualSec; } const varianceText = deltaSec >= 0 ? `(+${fromSec(deltaSec)})` : `(-${fromSec(Math.abs(deltaSec))})`; let partDetails = ''; if (options.includePartTimes && seg.start && seg.end) { partDetails = ` (${formatTo12h_short(seg.start)} - ${formatTo12h_short(seg.end)})`; } report += `${seg.title}:${partDetails} ${varianceText}\n`; }); } } if (options.includeOverallVariance) { const overallVariance = totalActualSeconds - totalTargetSeconds; const overallVarianceText = overallVariance >= 0 ? `+${fromSecHMS(overallVariance)}` : `-${fromSecHMS(Math.abs(overallVariance))}`; report += `\n--------------------------------------\nOVERALL MEETING VARIANCE:\n${overallVarianceText}\n--------------------------------------\n`; } return report; }
             function copyReport(reportText, buttonElement) { const tempInput = document.createElement('textarea'); tempInput.value = reportText; tempInput.style.position = 'absolute'; tempInput.style.left = '-9999px'; document.body.appendChild(tempInput); tempInput.select(); try { if (document.execCommand('copy')) { buttonElement.innerHTML = '<span class="material-symbols-outlined">done</span> Copied!'; buttonElement.classList.replace('primary', 'ok'); setTimeout(() => { buttonElement.innerHTML = '<span class="material-symbols-outlined">share</span> Share'; buttonElement.classList.replace('ok', 'primary'); }, 2000); } else { throw new Error('Copy failed'); } } catch (err) { buttonElement.innerHTML = '<span class="material-symbols-outlined">error</span> Failed'; buttonElement.classList.replace('primary', 'warn'); setTimeout(() => { buttonElement.innerHTML = '<span class="material-symbols-outlined">share</span> Share'; buttonElement.classList.replace('warn', 'primary'); }, 3000); } finally { document.body.removeChild(tempInput); } }
+            
             function clm_updateToggleIcon(isDarkMode) { if (!els.themeIcon) return; if (isDarkMode) { els.themeIcon.textContent = 'light_mode'; els.themeBtn.title = 'Switch to Light Mode'; } else { els.themeIcon.textContent = 'dark_mode'; els.themeBtn.title = 'Switch to Dark Mode'; } }
             window.clm_toggleDarkMode = function() { const isDark = clmContainer.getAttribute('data-theme') === 'dark'; const newMode = isDark ? 'light' : 'dark'; setTheme(newMode); }
             const setTheme = (mode) => { if (mode === 'dark') { clmContainer.setAttribute('data-theme', 'dark'); } else { clmContainer.removeAttribute('data-theme'); } clm_updateToggleIcon(mode === 'dark'); localStorage.setItem('clm_theme', '' + mode); };
+            
             setInterval(() => { els.liveClock.textContent = formatTo12h(nowHMS()); }, 1000); setInterval(masterClockTick, 1000);
+            
             els.meetingStart.addEventListener('change', e => { state.cfg.start = e.target.value; calculateTargetStartTimes(); save(); });
+            
+            const btnAddSegB = $('#addSegB'); if (btnAddSegB) btnAddSegB.addEventListener('click', () => addSegmentToBlock('B'));
             $('#addSegC').addEventListener('click', () => addSegmentToBlock('C'));
+            
             els.generateReportBtn.addEventListener('click', () => { els.shareModal.style.display = 'flex'; });
             els.confirmResetBtn.addEventListener('click', () => { const segmentId = els.resetModal.dataset.segmentIdToReset; if (segmentId) { resetSegment(segmentId); } closeModal(els.resetModal); });
             const closeModal = (modal) => { modal.style.display = 'none'; };
-            els.cancelResetBtn.addEventListener('click', () => closeModal(els.resetModal)); els.resetModal.addEventListener('click', (e) => { if (e.target === els.resetModal) closeModal(els.resetModal); });
-            els.cancelShareBtn.addEventListener('click', () => closeModal(els.shareModal)); els.shareModal.addEventListener('click', (e) => { if (e.target === els.shareModal) closeModal(els.shareModal); });
-            els.confirmShareBtn.addEventListener('click', (e) => { const options = { includeTimes: els.shareMeetingTimes.checked, includeTreasures: els.shareTreasures.checked, includeMinistry: els.shareMinistry.checked, includeLiving: els.shareLiving.checked, includeOverallVariance: els.shareOverallVariance.checked, includePartTimes: els.sharePartTimes.checked }; const reportText = generateReportText(options); copyReport(reportText, els.generateReportBtn); closeModal(els.shareModal); });
-            const savedTheme = localStorage.getItem('clm_theme'); let initialMode = 'light'; if (savedTheme) { initialMode = savedTheme; } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) { initialMode = 'dark'; } setTheme(initialMode); load();
-            const expectedTitles = ["Opening Song & Prayer", "Closing Song & Prayer"]; const hasExpectedSegments = state.segments && Array.isArray(state.segments) && expectedTitles.every(title => state.segments.some(seg => seg.title === title) );
-            if (!hasExpectedSegments) { state.segments = defaultTemplate(); save(); }
-            if (!state.cfg.start) state.cfg.start = '19:30';
-            render();
+            els.cancelResetBtn.addEventListener('click', () => closeModal(els.resetModal)); 
+            els.resetModal.addEventListener('click', (e) => { if (e.target === els.resetModal) closeModal(els.resetModal); });
+            
+            els.cancelShareBtn.addEventListener('click', () => closeModal(els.shareModal));
+            els.confirmShareBtn.addEventListener('click', () => {
+                const options = {
+                    includeTimes: els.shareMeetingTimes.checked,
+                    includeTreasures: els.shareTreasures.checked,
+                    includeMinistry: els.shareMinistry.checked,
+                    includeLiving: els.shareLiving.checked,
+                    includePartTimes: els.sharePartTimes.checked,
+                    includeOverallVariance: els.shareOverallVariance.checked
+                };
+                const reportText = generateReportText(options);
+                copyReport(reportText, els.confirmShareBtn);
+                setTimeout(() => closeModal(els.shareModal), 2000);
+            });
+            els.shareModal.addEventListener('click', (e) => { if (e.target === els.shareModal) closeModal(els.shareModal); });
+            
+            document.addEventListener('DOMContentLoaded', () => {
+                const savedTheme = localStorage.getItem('clm_theme');
+                if (savedTheme === 'dark' || (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    setTheme('dark');
+                } else {
+                    setTheme('light');
+                }
+                load();
+                render();
+            });
+
         })();
 
         // --- 4. Scoped JavaScript for CBS Timing Assist ---
         (() => {
-            const CBS_STEP_SECONDS = 30; // +/- button increment
-            const container = document.getElementById('cbs-container');
-            const $ = (id) => document.getElementById(id);
+            const SEGMENT_TYPES = {
+                READING: 'READING', BIBLE: 'BIBLE', DISCUSSION: 'DISCUSSION',
+                DIG: 'DIG', REFLECT: 'REFLECT', MEDITATE: 'MEDITATE'
+            };
 
-            function updateToggleIcon(isDarkMode) {
-                const btn = $('cbsThemeToggle');
-                if (!btn) return;
-                btn.innerHTML = isDarkMode ? '<span class="material-symbols-outlined">light_mode</span>' : '<span class="material-symbols-outlined">dark_mode</span>';
-                btn.title = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+            const defaultBlocks = [
+                { id: 'read1', type: SEGMENT_TYPES.READING, title: 'Paragraphs 1-2', initialDuration: 60, targetContainer: 'cbs-schedule-read', isRemovable: false },
+                { id: 'bible1', type: SEGMENT_TYPES.BIBLE, title: 'Read the Bible Account', initialDuration: 90, targetContainer: 'cbs-schedule-bible', isRemovable: false },
+                { id: 'disc1', type: SEGMENT_TYPES.DISCUSSION, title: 'Question 1', initialDuration: 180, targetContainer: 'cbs-schedule-discussion', isRemovable: false },
+                { id: 'disc2', type: SEGMENT_TYPES.DISCUSSION, title: 'Question 2', initialDuration: 180, targetContainer: 'cbs-schedule-discussion', isRemovable: false },
+                { id: 'dig1', type: SEGMENT_TYPES.DIG, title: 'Dig Deeper Section', initialDuration: 300, targetContainer: 'cbs-schedule-dig', isRemovable: false },
+                { id: 'meditate1', type: SEGMENT_TYPES.MEDITATE, title: 'Review Question 1', initialDuration: 120, targetContainer: 'cbs-schedule-meditate', isRemovable: false },
+                { id: 'meditate2', type: SEGMENT_TYPES.MEDITATE, title: 'Review Question 2', initialDuration: 120, targetContainer: 'cbs-schedule-meditate', isRemovable: false }
+            ];
+
+            let segments = [];
+
+            function cbs_updateToggleIcon(isDarkMode) {
+                const toggleButton = document.getElementById('cbsThemeToggle');
+                if (!toggleButton) return;
+                if (isDarkMode) {
+                    toggleButton.innerHTML = '<span class="material-symbols-outlined">light_mode</span>';
+                    toggleButton.title = 'Switch to Light Mode';
+                } else {
+                    toggleButton.innerHTML = '<span class="material-symbols-outlined">dark_mode</span>';
+                    toggleButton.title = 'Switch to Dark Mode';
+                }
             }
 
             window.cbs_toggleDarkMode = function() {
+                const container = document.getElementById('cbs-container');
                 container.classList.toggle('dark-mode');
                 const isDarkMode = container.classList.contains('dark-mode');
                 localStorage.setItem('cbs_theme', isDarkMode ? 'dark' : 'light');
-                updateToggleIcon(isDarkMode);
+                cbs_updateToggleIcon(isDarkMode);
             }
 
-            // --- Time helpers (seconds-based) ---
-            function mmssToSeconds(timeStr) {
-                const cleanStr = (timeStr || '').replace(/[^0-9:]/g, '');
-                const parts = cleanStr.split(':');
-                let minutes = 0, seconds = 0;
-                if (parts.length === 2) {
-                    minutes = parseInt(parts[0]) || 0;
-                    seconds = parseInt(parts[1]) || 0;
-                } else if (cleanStr.length >= 3) {
-                    minutes = parseInt(cleanStr.substring(0, cleanStr.length - 2)) || 0;
-                    seconds = parseInt(cleanStr.substring(cleanStr.length - 2)) || 0;
-                } else if (cleanStr.length > 0) {
-                    seconds = parseInt(cleanStr) || 0;
-                }
-                if (isNaN(minutes) || isNaN(seconds) || seconds >= 60 || minutes < 0 || seconds < 0) return NaN;
-                return (minutes * 60) + seconds;
-            }
-            function secondsToMMSS(totalSeconds) {
-                const s = Math.max(0, Math.round(totalSeconds || 0));
-                const m = Math.floor(s / 60);
-                const r = s % 60;
-                return `${String(m).padStart(2, '0')}:${String(r).padStart(2, '0')}`;
-            }
-            window.cbs_formatTime = function(input) {
-                let value = input.value.replace(/\D/g, '');
-                if (value.length > 4) value = value.substring(0, 4);
-                input.value = value.length >= 3 ? value.slice(0, -2) + ':' + value.slice(-2) : value;
-            }
-            function timeToMinutes(timeStr) {
-                if (!timeStr) return 0;
-                const [h, m] = timeStr.split(':').map(Number);
-                return (h * 60) + (m || 0);
-            }
-            function minutesToClock12(totalMinutes) {
-                const secondsInDay = 24 * 60;
-                let mins = ((totalMinutes % secondsInDay) + secondsInDay) % secondsInDay;
-                let hours = Math.floor(mins / 60);
-                const minutes = Math.round(mins % 60);
-                const ampm = hours >= 12 ? 'PM' : 'AM';
-                hours = hours % 12; if (hours === 0) hours = 12;
-                return `${hours}:${String(minutes).padStart(2, '0')} ${ampm}`;
-            }
-
-            // --- State ---
-            function defaultState() {
-                return {
-                    start: '20:36',
-                    stop: '21:06',
-                    cutdown: 0,
-                    read: [180],           // Study Reading (Paragraphs) - seconds - mirrors Reading Length field
-                    bible: [120],           // Read the Bible Account - independent, adjustable via +/-
-                    discussion: [120],     // For Discussion - 1 question
-                    dig: [120, 120, 120, 120], // Dig Deeper - 4 questions
-                    reflect: [120, 120, 120],  // Reflect on the Lessons - default 3, expandable
-                    meditate: [120, 120, 120]  // Meditate on the Bigger Picture - 3 questions
-                };
-            }
-            let state = defaultState();
-
-            function save() { localStorage.setItem('cbs_state', JSON.stringify(state)); }
-            function load() {
-                try {
-                    const saved = JSON.parse(localStorage.getItem('cbs_state'));
-                    if (saved) state = Object.assign(defaultState(), saved);
-                } catch (e) { /* keep defaults */ }
-            }
-
-            const BLOCK_TITLES = {
-                read: (i) => 'Study Reading (Paragraphs)',
-                bible: (i) => 'Read the Bible Account',
-                discussion: (i) => 'For Discussion',
-                dig: (i) => `Dig Deeper — Question ${i + 1}`,
-                reflect: (i) => `Reflect — Question ${i + 1}`,
-                meditate: (i) => `Meditate — Question ${i + 1}`
-            };
-            const BLOCK_CONTAINER = {
-                read: 'cbs-schedule-read',
-                bible: 'cbs-schedule-bible',
-                discussion: 'cbs-schedule-discussion',
-                dig: 'cbs-schedule-dig',
-                reflect: 'cbs-schedule-reflect',
-                meditate: 'cbs-schedule-meditate'
-            };
-            const BLOCK_ORDER = ['read', 'bible', 'discussion', 'dig', 'reflect', 'meditate'];
-
-            function rowHTML(blockKey, idx, seconds, startMin, endMin, deletable) {
-                const title = BLOCK_TITLES[blockKey](idx);
-                const mmss = secondsToMMSS(seconds);
-                const deleteBtn = deletable
-                    ? `<button class="btn-icon" data-action="delete" data-block="${blockKey}" data-index="${idx}" title="Remove question"><span class="material-symbols-outlined">delete</span></button>`
-                    : '';
-                return `<div class="seg">
-                    <div class="seg-head">
-                        <div class="seg-title">${title}</div>
-                        <div class="seg-meta">
-                            <span class="pill">Start: ${minutesToClock12(startMin)}</span>
-                            <span class="pill">End: ${minutesToClock12(endMin)}</span>
-                            ${deleteBtn}
-                        </div>
-                    </div>
-                    <div class="seg-controls">
-                        <button class="btn ghost qty-btn" data-action="minus" data-block="${blockKey}" data-index="${idx}" type="button">−</button>
-                        <input type="text" class="qtime" data-action="settime" data-block="${blockKey}" data-index="${idx}" value="${mmss}" maxlength="5" inputmode="numeric" oninput="cbs_formatTime(this)">
-                        <button class="btn ghost qty-btn" data-action="plus" data-block="${blockKey}" data-index="${idx}" type="button">+</button>
-                    </div>
-                </div>`;
-            }
-
-            function render() {
-                $('cbsStudyStart').value = state.start;
-                $('cbsStudyStop').value = state.stop;
-                $('cbsCutdown').value = state.cutdown;
-                $('cbsReadingLength').value = secondsToMMSS(state.read[0]);
-
-                let current = timeToMinutes(state.start);
-                BLOCK_ORDER.forEach(blockKey => {
-                    const el = $(BLOCK_CONTAINER[blockKey]);
-                    let html = '';
-                    state[blockKey].forEach((seconds, idx) => {
-                        const startMin = current;
-                        current += (seconds / 60);
-                        const endMin = current;
-                        const deletable = (blockKey === 'reflect' && state.reflect.length > 1);
-                        html += rowHTML(blockKey, idx, seconds, startMin, endMin, deletable);
-                    });
-                    el.innerHTML = html;
-                });
-
-                const actualEndMin = current;
-                const startMin = timeToMinutes(state.start);
-                const targetStopMin = timeToMinutes(state.stop) + (parseFloat(state.cutdown) || 0);
-
-                let totalUsed = actualEndMin - startMin;
-                if (totalUsed < 0) totalUsed += 24 * 60;
-                let totalAllocated = targetStopMin - startMin;
-                if (totalAllocated < 0) totalAllocated += 24 * 60;
-
-                let a = actualEndMin, b = targetStopMin;
-                if (b < startMin) b += 24 * 60;
-                if (a < startMin) a += 24 * 60;
-
-                const totalEl = $('cbsTotalDuration');
-                let msg = `<strong>Study Ends at: ${minutesToClock12(actualEndMin)}</strong> (Target, incl. cutdown: ${minutesToClock12(targetStopMin)})<br>Time used: ${totalUsed.toFixed(1)} min | Time allocated: ${totalAllocated.toFixed(1)} min`;
-                let cls = 'warning';
-                if (a > b) {
-                    msg += `<br><br><strong>WARNING:</strong> You are <strong>${(a - b).toFixed(1)} minutes over</strong> the target stop time!`;
-                    cls = 'warning';
-                } else {
-                    msg += `<br><br><strong>✓ On Schedule:</strong> ${(b - a).toFixed(1)} minutes remaining`;
-                    cls = 'success';
-                }
-                totalEl.innerHTML = msg;
-                totalEl.className = cls;
-                totalEl.style.display = 'inline-block';
-
-                save();
-            }
-
-            function adjustTime(blockKey, idx, deltaSeconds) {
-                const arr = state[blockKey];
-                if (!arr || !arr[idx] === undefined) return;
-                arr[idx] = Math.max(0, (arr[idx] || 0) + deltaSeconds);
-                if (blockKey === 'read') arr[idx] = arr[idx]; // reading length has no floor beyond 0
-                render();
-            }
-
-            function setTimeDirect(blockKey, idx, mmss) {
-                const secs = mmssToSeconds(mmss);
-                if (!isNaN(secs)) {
-                    state[blockKey][idx] = secs;
-                    render();
-                }
-            }
-
-            function addReflectQuestion() {
-                state.reflect.push(120);
-                render();
-            }
-            function removeReflectQuestion(idx) {
-                if (state.reflect.length <= 1) return;
-                state.reflect.splice(idx, 1);
-                render();
-            }
-
-            // Event delegation for all +/-/delete/time-entry controls
-            container.addEventListener('click', (e) => {
-                const target = e.target.closest('[data-action]');
-                if (!target) return;
-                const action = target.dataset.action;
-                const blockKey = target.dataset.block;
-                const idx = parseInt(target.dataset.index, 10);
-                if (action === 'plus') adjustTime(blockKey, idx, CBS_STEP_SECONDS);
-                else if (action === 'minus') adjustTime(blockKey, idx, -CBS_STEP_SECONDS);
-                else if (action === 'delete' && blockKey === 'reflect') removeReflectQuestion(idx);
-            });
-            container.addEventListener('change', (e) => {
-                const target = e.target.closest('[data-action="settime"]');
-                if (!target) return;
-                setTimeDirect(target.dataset.block, parseInt(target.dataset.index, 10), target.value);
-            });
-
-            $('cbsAddReflectBtn').addEventListener('click', addReflectQuestion);
-            $('cbsCalculateBtn').addEventListener('click', () => {
-                state.start = $('cbsStudyStart').value || state.start;
-                state.stop = $('cbsStudyStop').value || state.stop;
-                state.cutdown = parseFloat($('cbsCutdown').value) || 0;
-                const readingSecs = mmssToSeconds($('cbsReadingLength').value);
-                if (!isNaN(readingSecs)) state.read[0] = readingSecs;
-                render();
-            });
-            ['cbsStudyStart', 'cbsStudyStop', 'cbsCutdown'].forEach(id => {
-                $(id).addEventListener('change', () => {
-                    state.start = $('cbsStudyStart').value || state.start;
-                    state.stop = $('cbsStudyStop').value || state.stop;
-                    state.cutdown = parseFloat($('cbsCutdown').value) || 0;
-                    render();
-                });
-            });
-            $('cbsReadingLength').addEventListener('change', () => {
-                const secs = mmssToSeconds($('cbsReadingLength').value);
-                if (!isNaN(secs)) { state.read[0] = secs; render(); }
-            });
-
-            document.addEventListener('DOMContentLoaded', () => {
+            function initCBS() {
+                segments = [...defaultBlocks.map(b => ({...b}))];
                 const savedTheme = localStorage.getItem('cbs_theme');
                 let isDarkMode = false;
                 if (savedTheme === 'dark' || (savedTheme !== 'light' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                     isDarkMode = true;
                 }
+                const container = document.getElementById('cbs-container');
                 if (isDarkMode) container.classList.add('dark-mode');
-                updateToggleIcon(isDarkMode);
-                load();
-                render();
-            });
-        })();
+                cbs_updateToggleIcon(isDarkMode);
+                
+                renderCBSSegments();
 
+                document.getElementById('cbsCalculateBtn').addEventListener('click', calculateCBSSchedule);
+                document.getElementById('cbsAddReflectBtn').addEventListener('click', addReflectQuestion);
+                document.getElementById('cbsReadingLength').addEventListener('input', function() { cbs_formatTime(this); });
+            }
+
+            function cbs_formatTime(input) {
+                let value = input.value.replace(/\D/g, '');
+                if (value.length > 4) value = value.substring(0, 4);
+                let formattedValue = '';
+                if (value.length >= 3) {
+                    formattedValue = value.slice(0, -2) + ':' + value.slice(-2);
+                } else {
+                    formattedValue = value;
+                }
+                input.value = formattedValue;
+            }
+
+            function timeStrToSec(timeStr) {
+                if (!timeStr) return 0;
+                const cleanStr = timeStr.replace(/[^0-9:]/g, '');
+                const parts = cleanStr.split(':');
+                let m = 0, s = 0;
+                if (parts.length === 2) {
+                    m = parseInt(parts[0]) || 0;
+                    s = parseInt(parts[1]) || 0;
+                } else if (cleanStr.length >= 3) {
+                    m = parseInt(cleanStr.substring(0, cleanStr.length - 2)) || 0;
+                    s = parseInt(cleanStr.substring(cleanStr.length - 2)) || 0;
+                } else if (cleanStr.length > 0) {
+                    s = parseInt(cleanStr) || 0;
+                }
+                return (m * 60) + s;
+            }
+
+            function secToMMSS(seconds) {
+                const s = Math.max(0, Math.round(seconds));
+                const m = Math.floor(s / 60);
+                const rm = s % 60;
+                return `${String(m).padStart(2, '0')}:${String(rm).padStart(2, '0')}`;
+            }
+
+            function cbsTimeToMinutes(timeStr) {
+                if (!timeStr) return 0;
+                const [hours, minutes] = timeStr.split(':').map(Number);
+                return hours * 60 + minutes;
+            }
+
+            function cbsMinutesToTime(totalMinutes, use12Hour = true) {
+                let totalSeconds = Math.round(totalMinutes * 60);
+                const secondsInDay = 24 * 60 * 60;
+                totalSeconds = ((totalSeconds % secondsInDay) + secondsInDay) % secondsInDay;
+                let hours = Math.floor(totalSeconds / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                if (use12Hour) {
+                    const ampm = hours >= 12 ? 'PM' : 'AM';
+                    hours = hours % 12;
+                    if (hours === 0) hours = 12;
+                    return `${String(hours)}:${String(minutes).padStart(2, '0')} ${ampm}`;
+                } else {
+                    return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+                }
+            }
+
+            function renderCBSSegments() {
+                const containers = {
+                    'cbs-schedule-read': document.getElementById('cbs-schedule-read'),
+                    'cbs-schedule-bible': document.getElementById('cbs-schedule-bible'),
+                    'cbs-schedule-discussion': document.getElementById('cbs-schedule-discussion'),
+                    'cbs-schedule-dig': document.getElementById('cbs-schedule-dig'),
+                    'cbs-schedule-reflect': document.getElementById('cbs-schedule-reflect'),
+                    'cbs-schedule-meditate': document.getElementById('cbs-schedule-meditate')
+                };
+                
+                for (let key in containers) { if(containers[key]) containers[key].innerHTML = ''; }
+
+                segments.forEach(seg => {
+                    const cont = containers[seg.targetContainer];
+                    if (!cont) return;
+
+                    const html = `
+                        <div class="seg" id="cbs_seg_${seg.id}">
+                            <div class="seg-head">
+                                <div class="seg-title">${seg.title}</div>
+                                <div class="seg-meta">
+                                    <span class="pill" id="cbs_start_${seg.id}">--:--</span>
+                                    ${seg.isRemovable ? `<button class="btn-icon" onclick="removeCBSSegment('${seg.id}')" title="Remove"><span class="material-symbols-outlined">delete</span></button>` : ''}
+                                </div>
+                            </div>
+                            <div class="seg-controls">
+                                <button class="btn ghost qty-btn" onclick="adjustCBSTime('${seg.id}', -30)">-</button>
+                                <input type="text" class="qtime" id="cbs_dur_${seg.id}" value="${secToMMSS(seg.initialDuration)}" maxlength="5" oninput="window.cbs_formatTime(this); updateCBSTime('${seg.id}')" onblur="updateCBSTime('${seg.id}')">
+                                <button class="btn ghost qty-btn" onclick="adjustCBSTime('${seg.id}', 30)">+</button>
+                            </div>
+                        </div>
+                    `;
+                    cont.insertAdjacentHTML('beforeend', html);
+                });
+            }
+
+            window.adjustCBSTime = function(id, deltaSec) {
+                const input = document.getElementById(`cbs_dur_${id}`);
+                if (!input) return;
+                let currentSec = timeStrToSec(input.value);
+                currentSec += deltaSec;
+                if (currentSec < 0) currentSec = 0;
+                input.value = secToMMSS(currentSec);
+                updateCBSTime(id);
+            };
+
+            window.updateCBSTime = function(id) {
+                const input = document.getElementById(`cbs_dur_${id}`);
+                if (!input) return;
+                const segIndex = segments.findIndex(s => s.id === id);
+                if (segIndex > -1) {
+                    segments[segIndex].initialDuration = timeStrToSec(input.value);
+                }
+                calculateCBSSchedule();
+            };
+
+            window.addReflectQuestion = function() {
+                const qNum = segments.filter(s => s.type === SEGMENT_TYPES.REFLECT).length + 1;
+                const newId = `reflect_${Date.now()}`;
+                segments.push({
+                    id: newId, type: SEGMENT_TYPES.REFLECT, title: `Reflect Question ${qNum}`,
+                    initialDuration: 120, targetContainer: 'cbs-schedule-reflect', isRemovable: true
+                });
+                renderCBSSegments();
+                calculateCBSSchedule();
+            };
+
+            window.removeCBSSegment = function(id) {
+                segments = segments.filter(s => s.id !== id);
+                
+                let reflectCount = 1;
+                segments.forEach(s => {
+                    if (s.type === SEGMENT_TYPES.REFLECT) {
+                        s.title = `Reflect Question ${reflectCount++}`;
+                    }
+                });
+                
+                renderCBSSegments();
+                calculateCBSSchedule();
+            };
+
+            window.calculateCBSSchedule = function() {
+                const startTimeInput = document.getElementById('cbsStudyStart').value;
+                const stopTimeInput = document.getElementById('cbsStudyStop').value;
+                const cutdownMin = parseFloat(document.getElementById('cbsCutdown').value) || 0;
+                const readingDurStr = document.getElementById('cbsReadingLength').value;
+                
+                if (!startTimeInput) return;
+                
+                let currentTimeMins = cbsTimeToMinutes(startTimeInput);
+                const readingSecs = timeStrToSec(readingDurStr);
+                
+                segments.forEach(seg => {
+                    const startLabel = document.getElementById(`cbs_start_${seg.id}`);
+                    if (!startLabel) return;
+                    
+                    startLabel.innerHTML = `<strong>${cbsMinutesToTime(currentTimeMins, true)}</strong>`;
+                    
+                    let durationSecs = seg.initialDuration;
+                    if (seg.type === SEGMENT_TYPES.READING) {
+                        durationSecs = readingSecs;
+                    }
+                    
+                    currentTimeMins += (durationSecs / 60);
+                });
+                
+                const finalEndTimeStr = cbsMinutesToTime(currentTimeMins, true);
+                const startTimeMins = cbsTimeToMinutes(startTimeInput);
+                const usedMins = currentTimeMins - startTimeMins;
+                
+                const durEl = document.getElementById('cbsTotalDuration');
+                
+                if (stopTimeInput) {
+                    let targetStopMins = cbsTimeToMinutes(stopTimeInput);
+                    if (targetStopMins < startTimeMins) targetStopMins += (24*60);
+                    
+                    let adjustedTargetStopMins = targetStopMins + cutdownMin;
+                    
+                    let message = `<strong>Calculated Stop: ${finalEndTimeStr}</strong><br>`;
+                    message += `Target Stop (Adjusted): ${cbsMinutesToTime(adjustedTargetStopMins, true)}<br>`;
+                    
+                    let a = currentTimeMins;
+                    let b = adjustedTargetStopMins;
+                    
+                    if (a > b) {
+                        message += `<br><strong>WARNING:</strong> You are <strong>${(a - b).toFixed(1)} minutes over</strong> your adjusted target!`;
+                        durEl.className = 'warning';
+                    } else {
+                        message += `<br><strong>✓ On Track:</strong> ${(b - a).toFixed(1)} minutes buffer remaining.`;
+                        durEl.className = 'success';
+                    }
+                    durEl.innerHTML = message;
+                    durEl.style.display = 'inline-block';
+                } else {
+                    durEl.innerHTML = `<strong>Calculated Stop: ${finalEndTimeStr}</strong> (Total: ${usedMins.toFixed(1)}m)`;
+                    durEl.className = 'success';
+                    durEl.style.display = 'inline-block';
+                }
+            };
+
+            document.addEventListener('DOMContentLoaded', initCBS);
+        })();
     </script>
 </body>
 </html>
